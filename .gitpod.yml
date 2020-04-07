@@ -1,0 +1,4 @@
+image:
+  file: .gitpod.dockerfile
+tasks:
+ - init: . ${GITPOD_REPO_ROOT}/init_tasks.sh    
