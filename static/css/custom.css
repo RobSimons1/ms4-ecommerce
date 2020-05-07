@@ -1,19 +1,57 @@
+/*------------------------------------Navbar*/
 .logo {
     max-width:100px; 
     margin-top: -7px;
 }
 
+#navbar {
+    
+}
+
+.menuitem {
+    height: auto;
+    text-align: center;
+    font-family: 'Kanit', sans-serif;
+    padding: 0;
+    font-weight: bolder;
+    color: #4B494A;
+}
+
+.menuitem a {
+    width: 100%;
+    text-decoration: none;
+    color: #4B494A;;
+    height: auto;
+}
+
+.menuitem a i {
+    padding-top: 22px;
+    display: inline;
+    color: #4B494A;
+    font-size: 26px;
+}
+
+.menuitem span {
+    display: block;
+    width: 100%;
+    padding-top: 5px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    color: #4B494A;
+}
+
+.hvr-pulse {
+    animation: pulse 2s infinite;   
+}
+
+/*------------------------------------Body*/
+
 body {
     font-family: Arial;
     padding-top: 100px;
-}
-
-footer {
-    margin-top: 40px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    border-top: 1px solid #ededed;
-    color: #A9A9A9;
 }
 
 .icon-bar {
@@ -68,4 +106,14 @@ caption p {
 
 .product-description {
     min-height: 40px;
+}
+
+/*-----------------------------------Footer*/
+
+footer {
+    margin-top: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top: 1px solid #ededed;
+    color: #A9A9A9;
 }
