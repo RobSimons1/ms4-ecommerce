@@ -74,11 +74,14 @@
         </div>
     {% endif %}
     <div class="container">
+    <h2>A Hove Based small batch nano-brewery adopting a Death-or-Glory approach since 2014</h2>
+    <div id="search-bar">
         <div class="display">
             <form action="{% url 'search' %}" method="get">
                 <input type="text" name="q">
                 <button type="search">Search</button>
             </form>
+        </div>
         </div>
         {% block content %} {% endblock %}
     </div>
