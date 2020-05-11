@@ -1,11 +1,15 @@
 /*------------------------------------Navbar*/
 .logo {
-    max-width:100px; 
-    margin-top: -7px;
+    width: 200px;
+    max-height: 100px;    
 }
 
 #navbar {
-    background-color: #fff
+    background-color: #fff; 
+}
+
+.navbar-header {
+    background-color: #fff;  
 }
 
 .menuitem {
