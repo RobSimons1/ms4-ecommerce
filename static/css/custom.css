@@ -4,12 +4,20 @@
     max-height: 100px;    
 }
 
+.navbar-toggle {
+    background-color: black;
+}
+
 #navbar {
     background-color: #fff; 
 }
 
+.navbar {
+    background-color: #fff; 
+}
+
 .navbar-header {
-    background-color: #fff;  
+    background-color: #fff; 
 }
 
 .menuitem {
