@@ -4,6 +4,12 @@
     max-height: 100px;    
 }
 
+.navbar {
+    border-color: #fff;
+    border-bottom: #fff;
+    background-color: #fff;
+    background-image: unset; /*Over-rides Bootstrap default*/
+}
 .navbar-toggle {
     background-color: black;
 }
