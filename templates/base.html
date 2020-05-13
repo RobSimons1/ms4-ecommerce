@@ -10,6 +10,8 @@
     <!-- <link rel="stylesheet" href="{% static 'font-awesome/css/font-awesome.min.css' %}"> 
     cdn used instead,as static not working.. NEED TO FIX--> 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css" type="text/css" />
+    <!-- Link to make navbar hover work --> 
     <link rel="stylesheet" href="{% static 'css/custom.css' %}">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -36,7 +38,7 @@
                 <ul class="nav navbar-nav navbar-right">
                     {% if user.is_authenticated %}
                         <li class="menuitem">
-                        <a href="{% url 'profile' %}" class="hvr-pulse">
+                        <a href="{% url 'profile' %}" class="hvr-pulse"> <!-- Above CSS link used to make hvr-pulse work --> 
                         <i class="fa fa-user"></i><span>Profile</span></a>
                         </li>
                         <li class="menuitem">

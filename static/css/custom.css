@@ -6,20 +6,33 @@
 
 .navbar {
     border-color: #fff;
-    border-bottom: #fff;
     background-color: #fff;
     background-image: unset; /*Over-rides Bootstrap default*/
 }
-.navbar-toggle {
-    background-color: black;
-}
 
 #navbar {
-    background-color: #fff; 
+    border-color: #fff;
+    background-color: #fff;
+    background-image: unset; /*Over-rides Bootstrap default*/
 }
 
-.navbar {
-    background-color: #fff; 
+.navbar-toggle {
+    background-color: black;
+    border-color: black;
+}
+
+.navbar .navbar-toggle:hover {
+    background-color: pink;
+    border-color: #fff;
+}
+
+/*Over-rides Bootstrap Navbar Hover colour*/
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+    background-color: pink;
+}
+
+.navbar-nav {
+   background-color: #fff; 
 }
 
 .navbar-header {
@@ -59,10 +72,11 @@
     font-weight: 300;
     letter-spacing: 2px;
     color: #4B494A;
-}
+} 
 
+/*Should control Hover speed*/
 .hvr-pulse {
-    animation: pulse 2s infinite;   
+    animation: pulse 50s infinite;   
 }
 
 /*------------------------------------Body*/
