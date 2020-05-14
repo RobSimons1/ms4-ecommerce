@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700|Exo:100,200,300,400,500,600,700|Indie+Flower:100,200,300,400,500,600,700|Audiowide:100,200,300,400,500,600,700|Righteous:100,200,300,400,500,600,700|Kanit:100,200,300,400,500,600,700');
+
 /*------------------------------------Navbar*/
 .logo {
     width: 200px;
@@ -88,15 +90,17 @@
 /*------------------------------------Body*/
 
 h2 {
-    background-color: pink;
+    font-size: 27px;
+    font-weight: bolder;
+    font-family: 'Kanit', sans-serif;
+    color: #E2AA72;
+    text-align: center;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: auto;
+    vertical-align: top;
 }
 
 #search-bar {
-    background-color: pink;
+    
     display: block;
     margin-left: auto;
     margin-right: auto;
