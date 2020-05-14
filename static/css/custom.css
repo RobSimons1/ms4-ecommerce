@@ -23,16 +23,12 @@
 
 .navbar-default .navbar-toggle {
     border-color: #555555;
-    background-color: #555555;
+    background-color: #555555 !important;
 }    
-
-button .navbar-toggle {
-    background-color: #555555;    
-}
 
 .navbar .navbar-toggle:hover {    
     border-color: #fff;
-    background-color: pink;
+    background-color: pink !important;
 }
 
 /*Over-rides Bootstrap Navbar Hover colour*/
