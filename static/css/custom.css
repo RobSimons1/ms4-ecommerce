@@ -17,17 +17,27 @@
 }
 
 .navbar-toggle {
-    background-color: black;
     border-color: black;
+    background-color: black;
 }
 
-.navbar .navbar-toggle:hover {
-    background-color: pink;
+.navbar-default .navbar-toggle {
+    border-color: #555555;
+    background-color: #555555;
+}    
+
+button .navbar-toggle {
+    background-color: #555555;    
+}
+
+.navbar .navbar-toggle:hover {    
     border-color: #fff;
+    background-color: pink;
 }
 
 /*Over-rides Bootstrap Navbar Hover colour*/
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+    border-color: pink;
     background-color: pink;
 }
 
