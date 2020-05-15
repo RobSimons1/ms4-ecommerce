@@ -96,15 +96,12 @@ h2 {
     color: #E2AA72;
     text-align: center;
     display: block;
-    vertical-align: top;
 }
 
 #search-bar {
-    
+    text-align: center;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 30%;
+    
 }
 
 body {
