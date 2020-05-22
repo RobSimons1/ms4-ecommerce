@@ -40,6 +40,10 @@
 				</div>
 				<div id="navbar" class="navbar-collapse collapse">
 					<ul class="nav navbar-nav navbar-right">
+                        <li class="menuitem">
+							<a href="{% url 'index' %}" class="hvr-pulse">
+								<i class="fa fa-home"></i><span>Shop</span></a>
+                        </li>
 						{% if user.is_authenticated %}
                         <li class="menuitem">
 							<a href="{% url 'contact' %}" class="hvr-pulse">
