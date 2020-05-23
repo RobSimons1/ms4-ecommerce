@@ -136,7 +136,12 @@ body {
     background-repeat: no-repeat;
     width: 150px;
     height: 150px;
-    margin: 0 auto;
+    margin: 10px;
+}
+
+.brewery-name {
+    font-weight: bolder;
+    color: #c67605;
 }
 
 caption p {
