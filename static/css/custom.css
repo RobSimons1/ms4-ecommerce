@@ -154,6 +154,10 @@ caption p {
     margin-top: 30px;
 }
 
+.product-info {
+    float: right;
+}
+
 .panel-default {
     border-color: transparent;
     padding: 0 10px;
