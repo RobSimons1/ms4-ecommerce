@@ -172,6 +172,11 @@ caption p {
     min-height: 40px;
 }
 
+.product-info-header {
+    font-weight: bolder;
+    min-height: 40px;
+}
+
 /*-----------------------------------Footer*/
 
 footer {
