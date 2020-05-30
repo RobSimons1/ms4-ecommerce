@@ -177,6 +177,12 @@ caption p {
     min-height: 40px;
 }
 
+.product-blurb {
+    font-weight:;
+    min-height: 40px;
+    display: block;    
+}
+
 /*-----------------------------------Footer*/
 
 footer {
