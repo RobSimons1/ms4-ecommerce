@@ -3,37 +3,88 @@
 {% block content %}
 <div class="col row-flex">
 	{% for product in products %}
+
 	<div class="row-xs-10 row-xs-offset-1 row-sm-offset-0 row-sm-6 row-md-4 display panel panel-default">
 		<div class="panel-body">
 
-			<div class="col row-flex row-md-12 row col-md-6 col-md-8">
-				<div class="product" style="background-image: url('{{ MEDIA_URL }}{{ product.image }}')"></div>
+			{% if forloop.counter|divisibleby:"2" %}
 
-				<span><h3>{{ product.name }}</h3>
+			<div class="row">
+				<div class="col-sm-6">
+					<div class="product-info col-sm-12 col-md-12">
+						<p> <span class="product-info-header">{{ product.info }}</p></span>
+							<p> <span class="product-blurb">{{ product.blurb }}</p></span>
+								<p><span class="glyphicon glyphicon-euro" aria-hidden="true"></span>{{ product.price }}
+								</p>
+
+								<form method="post" action="{% url 'add_to_cart' product.id %}">
+									{% csrf_token %}
+									<div class="input-group">
+										<input name="quantity" type="number" min="1" max="999" class="form-control"
+                        placeholder="Quantity" required>
+										<!-- required attribute added to placeholder to stop user sumbitting a blank string -->
+										<span class="input-group-btn">
+                            <button class="btn btn-success" type="submit">Add</button>
+                        </span>
+									</div>
+								</form>
+					</div>
+				</div>
+
+				<div class="panel-two">
+					<div class="col row-flex row-md-12 row col-sm-6 col-md-6 col-md-8">
+						<div class="product" style="background-image: url('{{ MEDIA_URL }}{{ product.image }}')"></div>
+
+						<span><h3>{{ product.name }}</h3>
                 <p class= "brewery-name">Blindside Brewing</p>
                 <p class="product-description">{{ product.description }}</p>
                 </span>
 
+					</div>
+				</div>
 			</div>
-			<div class="product-info col-md-6 row-flex-reverse">
-                <p> <span class="product-info-header">{{ product.info }}</p></span>
-                <p> <span class="product-blurb">{{ product.blurb }}</p></span>
-				<p><span class="glyphicon glyphicon-euro" aria-hidden="true"></span>{{ product.price }}</p>
 
-				<form method="post" action="{% url 'add_to_cart' product.id %}">
-					{% csrf_token %}
-					<div class="input-group">
-						<input name="quantity" type="number" min="1" max="999" class="form-control"
+
+			{% else %}
+
+			<div class="row">
+				<div class="col-sm-6">
+					<div class="col row-flex row-md-12 row col-md-12">
+						<div class="product" style="background-image: url('{{ MEDIA_URL }}{{ product.image }}')"></div>
+
+						<span><h3>{{ product.name }}</h3>
+                <p class= "brewery-name">Blindside Brewing</p>
+                <p class="product-description">{{ product.description }}</p>
+                </span>
+
+					</div>
+				</div>
+                
+				<div class="panel-two-reverse">
+					<div class="product-info col-sm-6 col-md-6 row-flex-reverse">
+						<p> <span class="product-info-header">{{ product.info }}</p></span>
+							<p> <span class="product-blurb">{{ product.blurb }}</p></span>
+								<p><span class="glyphicon glyphicon-euro" aria-hidden="true"></span>{{ product.price }}
+								</p>
+
+								<form method="post" action="{% url 'add_to_cart' product.id %}">
+									{% csrf_token %}
+									<div class="input-group">
+										<input name="quantity" type="number" min="1" max="999" class="form-control"
                         placeholder="Quantity" required>
-						<!-- required attribute added to placeholder to stop user sumbitting a blank string -->
-						<span class="input-group-btn">
+										<!-- required attribute added to placeholder to stop user sumbitting a blank string -->
+										<span class="input-group-btn">
                             <button class="btn btn-success" type="submit">Add</button>
                         </span>
+									</div>
+								</form>
+                    </div>
 					</div>
+				</div>
+				{% endif %}
 			</div>
-			</form>
+
 		</div>
+		{% endfor %}
 	</div>
-	{% endfor %}
-</div>
-{% endblock %}
+	{% endblock %}
