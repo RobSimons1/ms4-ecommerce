@@ -14,8 +14,12 @@
 					<div class="product-info col-sm-12 col-md-12">
 						<p> <span class="product-info-header">{{ product.info }}</p></span>
 							<p> <span class="product-blurb">{{ product.blurb }}</p></span>
-								<p><span class="glyphicon glyphicon-euro" aria-hidden="true"></span>{{ product.price }}
-								</p>
+								<p><span class="alcohol-cont">{{ product.alcohol }}</span>
+                                <span> | </span>
+                                <span class="glyphicon glyphicon-euro" aria-hidden="true"></span>{{ product.price }}
+                                <span class="bottle-size">{{ product.size }}</span>
+                                </p>
+                            
 
 								<form method="post" action="{% url 'add_to_cart' product.id %}">
 									{% csrf_token %}
@@ -59,13 +63,16 @@
 
 					</div>
 				</div>
-                
+
 				<div class="panel-two-reverse">
 					<div class="product-info col-sm-6 col-md-6 row-flex-reverse">
 						<p> <span class="product-info-header">{{ product.info }}</p></span>
 							<p> <span class="product-blurb">{{ product.blurb }}</p></span>
-								<p><span class="glyphicon glyphicon-euro" aria-hidden="true"></span>{{ product.price }}
-								</p>
+								<p><span class="alcohol-cont">{{ product.alcohol }}</span>
+                                <span> | </span>
+                                <span class="glyphicon glyphicon-euro" aria-hidden="true"></span>{{ product.price }}
+                                <span class="bottle-size">{{ product.size }}</span>
+                                </p>
 
 								<form method="post" action="{% url 'add_to_cart' product.id %}">
 									{% csrf_token %}
@@ -78,13 +85,13 @@
                         </span>
 									</div>
 								</form>
-                    </div>
 					</div>
 				</div>
-				{% endif %}
 			</div>
-
+			{% endif %}
 		</div>
-		{% endfor %}
+
 	</div>
-	{% endblock %}
+	{% endfor %}
+</div>
+{% endblock %}

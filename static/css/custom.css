@@ -183,6 +183,14 @@ caption p {
     display: block;    
 }
 
+.bottle-size {
+    font-weight: bolder;
+}
+
+.alcohol-cont {
+    font-weight: bolder;  
+}
+
 /*-----------------------------------Footer*/
 
 footer {
