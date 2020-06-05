@@ -201,11 +201,46 @@ footer {
     color: #A9A9A9;
 }
 
+.navbar-fixed-bottom {
+    display: inline-block;
+}
+
 .copyright {
+    text-align: center;
+    display: block;
     font-weight: bolder;
 }
 
 .footer-logo {
     text-align: center;
     display: block;
+}
+
+.social-links {
+    text-align: center;
+    display: inline;
+    padding-bottom: 15px;
+}
+
+.social-links li a i {
+    display: centre;
+    text-shadow: 2px 2px #8A1E25;
+    width: 50px;
+    height: 50px;
+    padding: 12px 0;
+    
+    font-size: 40px;
+    line-height: 25px;
+    text-align: center;
+    color: #5DA95F;
+   
+    transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    -webkit-transition: all 0.35s ease-in-out;
+    -o-transition: all 0.35s ease-in-out;
+}
+
+.social-links li a i:hover{
+    background: #8A1E25;
+    
 }
