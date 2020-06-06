@@ -35,8 +35,8 @@
 
 /*Over-rides Bootstrap Navbar Hover colour*/
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
-    border-color: pink;
-    background-color: pink;
+    border-color: #F5F5F5;
+    background-color: #F5F5F5;
 }
 
 .navbar-nav {
@@ -203,9 +203,11 @@ footer {
 
 .navbar-fixed-bottom {
     display: inline-block;
+    background-color: #F5F5F5;
 }
 
 .copyright {
+    margin-top: 40px;
     text-align: center;
     display: block;
     font-weight: bolder;
@@ -222,8 +224,10 @@ footer {
     padding-bottom: 15px;
 }
 
-.social-links li a i {
+.social-links li a i {    
+    margin-top: 30px;
     display: centre;
+    text-align: center;
     text-shadow: 2px 2px #8A1E25;
     width: 50px;
     height: 50px;
@@ -232,7 +236,7 @@ footer {
     font-size: 40px;
     line-height: 25px;
     text-align: center;
-    color: #5DA95F;
+    color: #c67605;
    
     transition: all 0.35s ease-in-out;
     -moz-transition: all 0.35s ease-in-out;
