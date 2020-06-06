@@ -30,7 +30,7 @@
 
 .navbar .navbar-toggle:hover {    
     border-color: #fff;
-    background-color: pink !important;
+    background-color: #c67605 !important;
 }
 
 /*Over-rides Bootstrap Navbar Hover colour*/
@@ -203,10 +203,11 @@ footer {
 
 .navbar-fixed-bottom {
     display: inline-block;
-    background-color: #F5F5F5;
+    background-color: #FFFFFF;
 }
 
 .copyright {
+    color: #1B1919;
     margin-top: 40px;
     text-align: center;
     display: block;
@@ -220,23 +221,21 @@ footer {
 
 .social-links {
     text-align: center;
-    display: inline;
     padding-bottom: 15px;
 }
 
 .social-links li a i {    
     margin-top: 30px;
     display: centre;
-    text-align: center;
-    text-shadow: 2px 2px #8A1E25;
+    text-shadow: 2px 2px #c67605;
     width: 50px;
     height: 50px;
     padding: 12px 0;
     
     font-size: 40px;
     line-height: 25px;
-    text-align: center;
-    color: #c67605;
+    
+    color: #1B1919;
    
     transition: all 0.35s ease-in-out;
     -moz-transition: all 0.35s ease-in-out;
@@ -245,6 +244,6 @@ footer {
 }
 
 .social-links li a i:hover{
-    background: #8A1E25;
+    background: #F5F5F5;
     
 }
