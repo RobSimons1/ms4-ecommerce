@@ -101,7 +101,8 @@ h2 {
 #search-bar {
     text-align: center;
     display: block;
-    
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 body {
@@ -247,4 +248,18 @@ footer {
 .social-links li a i:hover{
     background: #F5F5F5;
     
+}
+
+/*------------------------------------Media queries*/
+
+@media (min-width: 0px) and (max-width: 767px) {
+    
+.footer-logo {
+    display: none;
+}
+
+.copyright {
+    display: none;    
+}
+
 }
