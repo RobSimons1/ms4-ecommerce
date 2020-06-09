@@ -252,14 +252,11 @@ footer {
 
 /*------------------------------------Media queries*/
 
-@media (min-width: 0px) and (max-width: 767px) {
-    
-.footer-logo {
-    display: none;
-}
+@media (min-width: 768px) and (max-width: 991px) {
 
-.copyright {
-    display: none;    
+/*Media query added, as no Bootstrap measurement for Ipad resolution*/
+.panel-two-phone {
+    display: none;
 }
 
 }

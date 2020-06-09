@@ -1,7 +1,9 @@
 {% extends 'base.html' %}
 
 {% block content %}
+
 <div class="col row-flex">
+
 	{% for product in products %}
 
 	<div class="row-xs-10 row-xs-offset-1 row-sm-offset-0 row-sm-6 row-md-4 display panel panel-default">
@@ -10,16 +12,27 @@
 			{% if forloop.counter|divisibleby:"2" %}
 
 			<div class="row">
+                <div class="panel-two hidden-md hidden-lg hidden-xl">
+					<div class="col row-flex row-md-12 row col-sm-6 col-md-6 col-md-8">
+						<div class="product" style="background-image: url('{{ MEDIA_URL }}{{ product.image }}')"></div>
+
+						<span><h3>{{ product.name }}</h3>
+                <p class= "brewery-name">Blindside Brewing</p>
+                <p class="product-description">{{ product.description }}</p>
+                </span>
+
+					</div>
+				</div>
 				<div class="col-sm-6">
 					<div class="product-info col-sm-12 col-md-12">
 						<p> <span class="product-info-header">{{ product.info }}</p></span>
 							<p> <span class="product-blurb">{{ product.blurb }}</p></span>
 								<p><span class="alcohol-cont">{{ product.alcohol }}</span>
-                                <span> | </span>
-                                <span class="glyphicon glyphicon-euro" aria-hidden="true"></span>{{ product.price }}
-                                <span class="bottle-size">{{ product.size }}</span>
-                                </p>
-                            
+									<span> | </span>
+									<span class="glyphicon glyphicon-euro" aria-hidden="true"></span>{{ product.price }}
+									<span class="bottle-size">{{ product.size }}</span>
+								</p>
+
 
 								<form method="post" action="{% url 'add_to_cart' product.id %}">
 									{% csrf_token %}
@@ -35,7 +48,7 @@
 					</div>
 				</div>
 
-				<div class="panel-two">
+				<div class="panel-two-phone hidden-xs">
 					<div class="col row-flex row-md-12 row col-sm-6 col-md-6 col-md-8">
 						<div class="product" style="background-image: url('{{ MEDIA_URL }}{{ product.image }}')"></div>
 
@@ -69,10 +82,10 @@
 						<p> <span class="product-info-header">{{ product.info }}</p></span>
 							<p> <span class="product-blurb">{{ product.blurb }}</p></span>
 								<p><span class="alcohol-cont">{{ product.alcohol }}</span>
-                                <span> | </span>
-                                <span class="glyphicon glyphicon-euro" aria-hidden="true"></span>{{ product.price }}
-                                <span class="bottle-size">{{ product.size }}</span>
-                                </p>
+									<span> | </span>
+									<span class="glyphicon glyphicon-euro" aria-hidden="true"></span>{{ product.price }}
+									<span class="bottle-size">{{ product.size }}</span>
+								</p>
 
 								<form method="post" action="{% url 'add_to_cart' product.id %}">
 									{% csrf_token %}
