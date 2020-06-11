@@ -24,7 +24,7 @@
 					</div>
 				</div>
 				<div class="col-sm-6">
-					<div class="product-info col-sm-12 col-md-12">
+					<div class="product-info-phone col-sm-12 col-md-12">
 						<p> <span class="product-info-header">{{ product.info }}</p></span>
 							<p> <span class="product-blurb">{{ product.blurb }}</p></span>
 								<p><span class="alcohol-cont">{{ product.alcohol }}</span>
@@ -49,15 +49,18 @@
 				</div>
 
 				<div class="panel-two-phone hidden-xs">
-					<div class="col row-flex row-md-12 row col-sm-6 col-md-6 col-md-8">
-						<div class="product" style="background-image: url('{{ MEDIA_URL }}{{ product.image }}')"></div>
+                    
+					<div class="logo-info col row-flex row-md-12 row col-sm-6 col-md-6 col-md-8">
+					<div class="product" style="background-image: url('{{ MEDIA_URL }}{{ product.image }}')"></div>	
 
 						<span><h3>{{ product.name }}</h3>
                 <p class= "brewery-name">Blindside Brewing</p>
                 <p class="product-description">{{ product.description }}</p>
                 </span>
-
-					</div>
+                
+                
+                    </div>
+					
 				</div>
 			</div>
 
@@ -78,7 +81,7 @@
 				</div>
 
 				<div class="panel-two-reverse">
-					<div class="product-info col-sm-6 col-md-6 row-flex-reverse">
+					<div class="product-info col-sm-6 col-md-6">
 						<p> <span class="product-info-header">{{ product.info }}</p></span>
 							<p> <span class="product-blurb">{{ product.blurb }}</p></span>
 								<p><span class="alcohol-cont">{{ product.alcohol }}</span>

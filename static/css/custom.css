@@ -157,7 +157,12 @@ caption p {
 }
 
 .product-info {
-    float: right;
+    float: right;    
+}
+
+.product-info-phone {
+    padding-left: 0px;
+    padding-right: 0px;    
 }
 
 .panel-default {
@@ -168,6 +173,15 @@ caption p {
 .panel-body {
     height: 100%;
     border: 1px solid #ddd;
+}
+
+.panel-two {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.logo-info {
+    padding-left: 170px;
 }
 
 .product-description {
