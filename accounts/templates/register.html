@@ -10,11 +10,22 @@
 
 		<div id="legal-age">
 		<h4>ARE YOU OF LEGAL DRINKING AGE?<h4> 
-        <input type="radio" name="age" value="Yes" required> Yes<br>
-        <input type="radio" name="age" value="No" required> No<br>
-		</div>
+        <input onclick="enableBtn()" type="radio" name="age" value="Yes" required> Yes<br>        
+		</div>  
 
-		<button type="submit" class="btn btn-primary">Create account</button>
+        <button id="myBtn" type="submit" class="btn btn-primary" disabled>Create account</button>
+      
+
 	</fieldset>
 </form>
+
+<script>
+
+function enableBtn() {
+  document.getElementById("myBtn").disabled = false;
+}
+</script>  
+
 {% endblock %}
+
+  
