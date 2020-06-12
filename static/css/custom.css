@@ -106,10 +106,8 @@
 }
 
 /* Input for search bar */
-input {  
-    padding: 3px 3px 3px 20px;
-    margin-right: 10px;
-    margin-top: 10px;
+.search-input {  
+    margin: 10px 10px 0px 20px
 }
 
 body {
