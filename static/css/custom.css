@@ -59,7 +59,7 @@
 .menuitem a {
     width: 100%;
     text-decoration: none;
-    color: #4B494A;;
+    color: #4B494A;
     height: auto;
 }
 
@@ -67,6 +67,7 @@
     padding-top: 22px;
     display: inline;
     color: #4B494A;
+    text-shadow: 1px 1px #E2AA72;
     font-size: 26px;
 }
 
@@ -80,6 +81,7 @@
     font-weight: 300;
     letter-spacing: 2px;
     color: #4B494A;
+    text-shadow: 1px 1px #E2AA72;
 } 
 
 /*Should control Hover speed*/
@@ -94,6 +96,7 @@
     font-weight: bolder;
     font-family: 'Kanit', sans-serif;
     color: #E2AA72;
+    text-shadow: 1px 1px #4B494A;
     text-align: center;
     display: block;    
 }
@@ -229,6 +232,7 @@ footer {
 
 .copyright {
     color: #1B1919;
+    text-shadow: 1px 1px #E2AA72;
     margin-top: 40px;
     text-align: center;
     display: block;
@@ -248,7 +252,7 @@ footer {
 .social-links li a i {    
     margin-top: 30px;
     display: centre;
-    text-shadow: 2px 2px #c67605;
+    text-shadow: 1px 1px #c67605;
     width: 50px;
     height: 50px;
     padding: 12px 0;
