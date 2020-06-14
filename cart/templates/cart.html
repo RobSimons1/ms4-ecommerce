@@ -35,9 +35,18 @@
     {% endfor %}
 </div>
 <div class="row">
+    {% if cart_items %}
+    show
+
     <p>Total</p>
     <p><span class="glyphicon glyphicon-euro" aria-hidden="true"></span>{{ total }}</p>
     <a href="{% url 'checkout' %}" class="btn btn-success" role="button"><span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span>Checkout</a>
 </div>
+
+{% else %}
+
+    <h3>No items in your Cart.</h3>
+
+{% endif %}
 
 {% endblock %}
