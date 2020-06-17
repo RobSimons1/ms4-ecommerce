@@ -4,6 +4,11 @@ from django.contrib.auth.forms import UserCreationForm
 from django.core.exceptions import ValidationError
 
 
+class ContactForm(forms.Form):
+    name = forms.CharField()
+    username_or_email = forms.CharField()
+    message = forms.CharField()
+
 class UserLoginForm(forms.Form):
     username_or_email = forms.CharField()
     password = forms.CharField(widget=forms.PasswordInput)

@@ -1,15 +1,47 @@
 from django.shortcuts import render, redirect, HttpResponseRedirect
 from django.contrib import messages, auth
 from django.core.urlresolvers import reverse
-from .forms import UserLoginForm, UserRegistrationForm
+from .forms import UserLoginForm, UserRegistrationForm, ContactForm
 from django.template.context_processors import csrf
 from django.contrib.auth.decorators import login_required
+from django.core.mail import send_mail
 
 
 # Create your views here.
 def index(request):
     """A view that displays the index page"""
     return render(request, "index.html")
+
+
+def contact(request):
+    """A view that allows the user to send and email message redirects back to the contact page"""
+    if request.method == 'POST':  # If the form has been submitted...
+        user_form = ContactForm(request.POST)  # A form bound to the POST data
+        if user_form.is_valid():  # All validation rules pass
+            # Process the data in form.cleaned_data
+            # ...
+
+            print(user_form.cleaned_data['message'])
+
+            messages.success(request, "Your message was successfully sent")
+
+            send_mail(
+                username_or_email = (request, 'username_or_email'),
+                message = (request, 'message'),
+                name = (request, 'name'),
+                email_to = (request, ['rob.simons79@gmail.com']),
+                fail_silently=False,
+            )
+
+            return render(request, 'contact.html', {
+                'user_form': user_form,
+            })  # Redirect after POST
+    else:
+        user_form = ContactForm()  # An unbound form
+
+    return render(request, 'contact.html', {
+        'user_form': user_form,
+    })
 
 
 def logout(request):
@@ -31,13 +63,14 @@ def login(request):
                 auth.login(request, user)
                 messages.error(request, "You have successfully logged in")
 
-                if request.GET and request.GET['next'] !='':
+                if request.GET and request.GET['next'] != '':
                     next = request.GET['next']
                     return HttpResponseRedirect(next)
                 else:
                     return redirect(reverse('index'))
             else:
-                user_form.add_error(None, "Your username or password are incorrect")
+                user_form.add_error(
+                    None, "Your username or password are incorrect")
     else:
         user_form = UserLoginForm()
 
