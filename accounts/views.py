@@ -17,7 +17,7 @@ def contact(request):
     """A view that allows the user to send and email message redirects back to the contact page"""
     if request.method == 'POST':  # If the form has been submitted...
         user_form = ContactForm(request.POST)  # A form bound to the POST data
-        if user_form.is_valid():  # All validation rules pass
+        if user_form.is_valid ():  # All validation rules pass
             # Process the data in form.cleaned_data
             # ...
 
@@ -26,16 +26,14 @@ def contact(request):
             messages.success(request, "Your message was successfully sent")
 
             send_mail(
-                username_or_email = (request, 'username_or_email'),
-                message = (request, 'message'),
-                name = (request, 'name'),
-                email_to = (request, ['rob.simons79@gmail.com']),
+                request.POST['name'],
+                request.POST['username_or_email'],
+                request.POST['message'],
+                ['rob.simons79@gmail.com'],
                 fail_silently=False,
             )
 
-            return render(request, 'contact.html', {
-                'user_form': user_form,
-            })  # Redirect after POST
+            return HttpResponseRedirect('/thanks/')   # Redirect after POST
     else:
         user_form = ContactForm()  # An unbound form
 
