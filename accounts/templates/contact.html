@@ -2,7 +2,7 @@
 {% load bootstrap_tags %}
 {% block content %}
 
-<form action="{% url 'contact' %}" class="accountform">
+<form method="POST" action="{% url 'contact' %}" class="accountform">
 	<fieldset class="form-group">
 		<legend>Contact Us</legend>
 		<p>Feel free to message us about stuff</p>
