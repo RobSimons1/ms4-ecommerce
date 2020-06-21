@@ -233,7 +233,7 @@ footer {
 .copyright {
     color: #1B1919;
     text-shadow: 1px 1px #E2AA72;
-    margin-top: 40px;
+    margin-top: 20px;
     text-align: center;
     display: block;
     font-weight: bolder;
@@ -251,7 +251,8 @@ footer {
 }
 
 .social-links li a i {    
-    margin-top: 30px;
+    margin-top: 10px;
+    margin-bottom: 0px;
     display: centre;
     text-shadow: 1px 1px #c67605;
     width: 50px;
