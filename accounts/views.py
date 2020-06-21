@@ -26,10 +26,12 @@ def contact(request):
             messages.success(request, "Your message was successfully sent")
 
             send_mail(
-                request.POST['name'],
-                request.POST['username_or_email'],
-                request.POST['message'],
-                ['rob.simons79@gmail.com'],
+                name = request.POST.get('name', ''),
+                username_or_email = request.POST.get('username_or_email', ''),
+                subject = request.POST.get('subject', ''),
+                message = request.POST.get('message', ''),
+                from_email = request.POST.get('from_email', ''),
+                
                 fail_silently=False,
             )
 
