@@ -3,7 +3,7 @@
 /*------------------------------------Navbar*/
 .logo {
     width: 200px;
-    max-height: 100px;    
+    max-height: 100px;   
 }
 
 .navbar {
@@ -246,7 +246,8 @@ footer {
 
 .social-links {
     text-align: center;
-    padding-bottom: 15px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
 }
 
 .social-links li a i {    
@@ -255,13 +256,10 @@ footer {
     text-shadow: 1px 1px #c67605;
     width: 50px;
     height: 50px;
-    padding: 12px 0;
-    
+    padding: 12px 0px 0px 0px;    
     font-size: 40px;
-    line-height: 25px;
-    
-    color: #1B1919;
-   
+    line-height: 25px;    
+    color: #1B1919;   
     transition: all 0.35s ease-in-out;
     -moz-transition: all 0.35s ease-in-out;
     -webkit-transition: all 0.35s ease-in-out;
