@@ -33,7 +33,7 @@ def contact(request):
                 fail_silently=False,
             )
 
-            return HttpResponseRedirect('contact.html') # Redirect after POST
+            return HttpResponseRedirect('contact') # Redirect after POST
     else:
         user_form = ContactForm()  # An unbound form
 
