@@ -15,7 +15,7 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.contrib import admin
 from accounts import urls as urls_accounts
-from accounts import urls as urls_contact # contact URL
+
 from products import urls as urls_products
 from cart import urls as urls_cart
 from search import urls as urls_search
@@ -32,6 +32,6 @@ urlpatterns = [
     url(r'^cart/', include(urls_cart)),
     url(r'^checkout/', include(urls_checkout)),
     url(r'^search/', include(urls_search)),
-    url(r'^contact/', include(urls_contact)), # contact URL Pattern
+    
     url(r'^media/(?P<path>.*)$', static.serve, {'document_root': MEDIA_ROOT})
 ]
