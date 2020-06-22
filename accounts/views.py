@@ -26,7 +26,6 @@ def contact(request):
             messages.success(request, "Your message was successfully sent")
 
             send_mail(
-                request.POST['email_from'],
                 request.POST['username_or_email'],
                 request.POST['message'],
                 request.POST['subject'],           
