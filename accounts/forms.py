@@ -5,11 +5,12 @@ from django.core.exceptions import ValidationError
 
 
 class ContactForm(forms.Form):
-    name = forms.CharField()
     subject = forms.CharField()
-    message = forms.CharField()
+    name = forms.CharField()
     username_or_email = forms.CharField()
-    
+    message = forms.CharField()
+    context = forms.CharField()
+    age = forms.CharField()
 
 class UserLoginForm(forms.Form):
     username_or_email = forms.CharField()
