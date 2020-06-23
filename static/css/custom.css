@@ -92,7 +92,7 @@
 /*------------------------------------Body*/
 
 .statement {
-    font-size: 27px;
+    font-size: 25px;
     font-weight: bolder;
     font-family: 'Kanit', sans-serif;
     color: #E2AA72;
@@ -103,9 +103,8 @@
 
 #search-bar {
     text-align: center;
-    display: block;
-    padding-top: 20px;
-    padding-bottom: 15px;
+    display: block;   
+    padding-bottom: 10px;
 }
 
 /* Input for search bar */
