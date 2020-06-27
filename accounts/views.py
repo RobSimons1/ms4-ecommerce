@@ -31,7 +31,7 @@ def contact(request):
             send_mail(
                 request.POST['subject'],                
                 request.POST['message'],
-                "John Smith <test@example.com>",           
+                "John Smith <test@example.com>",  # Added to see what prints in Heroku         
                 ['rob.simons79@gmail.com'],
                 fail_silently=False,
             )
