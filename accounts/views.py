@@ -28,7 +28,7 @@ def contact(request):
             send_mail(
                 request.POST['subject'],                
                 request.POST['message'],
-                request.POST['username_or_email'],           
+                request.POST['from_email'],           
                 ['rob.simons79@gmail.com'],
                 fail_silently=False,
             )
