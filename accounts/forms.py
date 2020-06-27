@@ -8,6 +8,7 @@ class ContactForm(forms.Form):
     subject = forms.CharField()
     message = forms.CharField()
     from_email = forms.CharField()
+    recipient_list = forms.CharField()
     
         
 
