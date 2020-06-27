@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, HttpResponseRedirect
 from django.contrib import messages, auth
 from django.core.urlresolvers import reverse
-from .forms import UserLoginForm, UserRegistrationForm, ContactForm
+from .forms import UserLoginForm, UserRegistrationForm, ContactForm, sys
 from django.template.context_processors import csrf
 from django.contrib.auth.decorators import login_required
 from django.core.mail import send_mail
@@ -24,7 +24,7 @@ def contact(request):
             print(user_form.cleaned_data['subject'])
             print(user_form.cleaned_data['message'])
             print(user_form.cleaned_data['username_or_email'])
-            sys.stdout.flush()
+            sys.stdout.flush() # Added in to shck Heroku log print out
 
             messages.success(request, "Your message was successfully sent")
 
