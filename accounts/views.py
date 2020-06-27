@@ -1,11 +1,11 @@
 from django.shortcuts import render, redirect, HttpResponseRedirect
-from django.contrib import messages, auth, sys
+from django.contrib import messages, auth
 from django.core.urlresolvers import reverse
 from .forms import UserLoginForm, UserRegistrationForm, ContactForm
 from django.template.context_processors import csrf
 from django.contrib.auth.decorators import login_required
 from django.core.mail import send_mail
-
+import sys
 
 # Create your views here.
 def index(request):
