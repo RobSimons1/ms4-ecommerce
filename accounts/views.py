@@ -28,8 +28,8 @@ def contact(request):
             send_mail(
                 request.POST['subject'],                
                 request.POST['message'],
-                request.POST['from_email'],           
-                request.POST['recipient_list', 'rob.simons79@gmail.com'],
+                request.POST['username_or_email'],           
+                ['rob.simons79@gmail.com'],
                 fail_silently=False,
             )
 
