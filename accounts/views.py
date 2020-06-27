@@ -21,7 +21,9 @@ def contact(request):
             # Process the data in form.cleaned_data
             # ...
 
+            print(user_form.cleaned_data['subject'])
             print(user_form.cleaned_data['message'])
+            print(user_form.cleaned_data['username_or_email'])
 
             messages.success(request, "Your message was successfully sent")
 
