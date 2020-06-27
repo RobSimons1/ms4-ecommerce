@@ -5,7 +5,7 @@ from .forms import UserLoginForm, UserRegistrationForm, ContactForm
 from django.template.context_processors import csrf
 from django.contrib.auth.decorators import login_required
 from django.core.mail import send_mail
-import sys # imported to view print outs of Contat Form message in Heroku Logs
+import sys # imported to view print outs of Contat Form message in Heroku
 
 # Create your views here.
 def index(request):
@@ -31,8 +31,7 @@ def contact(request):
             send_mail(
                 request.POST['subject'],                
                 request.POST['message'],
-                request.POST['username_or_email'],
-                request.POST['name']         
+                request.POST['username_or_email'],           
                 ['rob.simons79@gmail.com'],
                 fail_silently=False,
             )
