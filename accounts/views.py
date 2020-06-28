@@ -31,7 +31,7 @@ def contact(request):
             send_mail(
                 request.POST['subject'],                
                 request.POST['message'],
-                "{{ user.username }} <{{ user.email }}>"        
+                request.POST['name'],       
                 ['rob.simons79@gmail.com'],
                 fail_silently=False,
             )
