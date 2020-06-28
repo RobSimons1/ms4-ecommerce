@@ -13,8 +13,35 @@
         <button id="myBtn" type="submit" class="btn btn-success">Send Message</button>      
 
 	</fieldset>
+    
+    <!-- code for js email send used with sendEmail.js in static folder 
+    <section class="container-fluid">
+        <div class="row bg-color-contact">
+            <div>
+                <h3 class="contact-heading uppercase text-center">Got a project in mind?</h3>
+                <h5 class="uppercase text-center">Let's work together</h5>
+            </div>
+            <div class="center-form">
+                <form onsubmit="return sendMail(this);" method="POST">
+                    <p>Hi {{ user.username }}, Please feel free to message us about stuff</p>
+                    <p>You are logged in as {{ user.email }} </p>
+                    {% csrf_token %}
+                    <input type="text" name="name" class="form-control" id="full-name" placeholder="Name" required/>
+                    <input type="text" name="emailaddress" class="form-control" id="emailaddress" placeholder="Email" required/>
+                    <textarea rows="5" name="projectsummary" class="form-control" id="projectsummary" placeholder="Project Description" required/></textarea>
+                    <button type="submit" class="btn btn-secondary center-block">Send Project Request</button>
+                </form>
+            </div>
+        </div>
+    </section>
 
+    <script type="text/javascript">
+        (function() {
+            emailjs.init("user_lFEyH0Ckyw6xKBRlUG98e");
+        })();
+    </script>
+    <script src="/static/js/sendEmail.js"></script>
 
-	
+	-->
 
 	{% endblock %}
