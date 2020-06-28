@@ -5,7 +5,8 @@
 <form method="POST" action="{% url 'contact' %}" class="accountform">
 	<fieldset class="form-group">
 		<legend>Contact Us</legend>
-		<p>Feel free to message us about stuff</p>
+		<p>Hi {{ user.username }}, Please feel free to message us about stuff</p>
+        <p>You are logged in as {{ user.email }} </p>
 		{% csrf_token %}
 		{{  user_form | as_bootstrap }}
 
