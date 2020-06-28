@@ -21,17 +21,17 @@ def contact(request):
             # Process the data in form.cleaned_data
             # ...
 
-            print(user_form.cleaned_data['subject'])
+            print(user_form.cleaned_data['user_email'])
             print(user_form.cleaned_data['message'])
-            print(user_form.cleaned_data['from_email'])
+            print(user_form.cleaned_data['email_to'])
             sys.stdout.flush() # Added in to show Heroku log print out
 
             messages.success(request, "Your message was successfully sent")
 
             send_mail(
-                request.POST['subject'],                
+                request.POST['user_email'],                
                 request.POST['message'],
-                request.POST['from_email'],           
+                request.POST['email_to'],           
                 ['rob.simons79@gmail.com'],
                 fail_silently=False,
             )

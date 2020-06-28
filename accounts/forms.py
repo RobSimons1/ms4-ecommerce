@@ -5,9 +5,9 @@ from django.core.exceptions import ValidationError
 
 
 class ContactForm(forms.Form):
-    subject = forms.CharField()
+    user_email = forms.CharField()
     message = forms.CharField()
-    from_email = forms.CharField()
+    email_to = forms.CharField()
         
 
 class UserLoginForm(forms.Form):
