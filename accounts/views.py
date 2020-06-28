@@ -24,14 +24,14 @@ def contact(request):
             print(user_form.cleaned_data['subject'])
             print(user_form.cleaned_data['message'])
             print(user_form.cleaned_data['username_or_email'])
-            sys.stdout.flush() # Added in to shck Heroku log print out
+            sys.stdout.flush() # Added in to show Heroku log print out
 
             messages.success(request, "Your message was successfully sent")
 
             send_mail(
                 request.POST['subject'],                
                 request.POST['message'],
-                request.POST['username_or_email'],           
+                "{{ user.username }} <{{ user.email }}>"        
                 ['rob.simons79@gmail.com'],
                 fail_silently=False,
             )
