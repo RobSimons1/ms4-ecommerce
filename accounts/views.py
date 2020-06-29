@@ -31,7 +31,7 @@ def contact(request):
             send_mail(
                 request.POST['user_email'],                
                 request.POST['message'],
-                request.POST['email_to'],           
+                "Blindside Brewing <test@example.com>",           
                 ['rob.simons79@gmail.com'],
                 fail_silently=False,
             )
