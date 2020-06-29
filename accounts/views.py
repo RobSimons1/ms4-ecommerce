@@ -23,7 +23,6 @@ def contact(request):
 
             print(user_form.cleaned_data['user_email'])
             print(user_form.cleaned_data['message'])
-            print(user_form.cleaned_data['email_to'])
             sys.stdout.flush() # Added in to show Heroku log print out
 
             messages.success(request, "Your message was successfully sent")
