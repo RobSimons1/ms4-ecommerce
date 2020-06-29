@@ -6,8 +6,8 @@ from django.core.exceptions import ValidationError
 
 class ContactForm(forms.Form):
     user_email = forms.CharField()
-    message = forms.CharField()
-    
+    message = forms.CharField(max_length=500, help_text='500 characters max.')
+    sender = forms.EmailField(help_text='A valid email address, please.')
         
 
 class UserLoginForm(forms.Form):
