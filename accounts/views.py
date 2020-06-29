@@ -30,7 +30,7 @@ def contact(request):
             send_mail(
                 request.POST['user_email'], # user email displays in subject field and can be responded to                
                 request.POST['message'], # body of message 
-                request.POST['sender'],        
+                "Blindside Brewing", # name of company appears in from_email field to know where email has derived from          
                 ['rob.simons79@gmail.com'], # email_to recipiant 
                 fail_silently=False,
             )
