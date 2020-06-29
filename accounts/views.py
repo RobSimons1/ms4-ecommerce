@@ -28,10 +28,10 @@ def contact(request):
             messages.success(request, "Your message was successfully sent")
 
             send_mail(
-                request.POST['user_email'],                
-                request.POST['message'],
-                "Blindside Brewing <test@example.com>",           
-                ['rob.simons79@gmail.com'],
+                request.POST['user_email'], # user email displays in subject field and can be responded to                
+                request.POST['message'], # body of message 
+                "Blindside Brewing", # name of company appears in from_email field to know where email has derived from          
+                ['rob.simons79@gmail.com'], # email_to recipiant 
                 fail_silently=False,
             )
 
