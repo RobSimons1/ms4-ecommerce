@@ -139,6 +139,17 @@
 		</div>
 	</footer>
 
+<!-- Script to highlight active page in navbar to help user navigation. used with CSS #navbar .active {} -->
+<script>
+    $(function(){
+        $('a').each(function(){
+            if ($(this).prop('href') == window.location.href) {
+                $(this).addClass('active'); $(this).parents('li').addClass('active');
+            }
+        });
+    });
+</script>
+
 </body>
 
 </html>

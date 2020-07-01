@@ -39,6 +39,12 @@
     background-color: #F5F5F5;
 }
 
+/* Used with jquery script to highlight active page in navbar */
+#navbar .active {
+    color:            #F5F5F5;
+    background-color: #F5F5F5 !important;
+}
+
 .navbar-nav {
    background-color: #fff; 
 }
