@@ -7,8 +7,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Blindside Brewing</title>
-    <!-- favicon link to favicon-32x32.png displayed in browser tab -->
-    <link rel="icon" type="image/png" href="media/images/favicon-32x32.png" sizes="32x32" />
+	<!-- favicon link to favicon-32x32.png displayed in browser tab -->
+	<link rel="icon" type="image/png" href="media/images/favicon-32x32.png" sizes="32x32" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.7/cerulean/bootstrap.min.css">
 	<!-- <link rel="stylesheet" href="{% static 'font-awesome/css/font-awesome.min.css' %}"> 
     cdn used instead,as static not working.. NEED TO FIX-->
@@ -20,8 +20,8 @@
 	<link rel="stylesheet" href="{% static 'css/custom.css' %}">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script> 
-    <!-- Script for Contact page send.email REMOVE IF JS EMAIL REMOVED -->
+	<script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
+	<!-- Script for Contact page send.email REMOVE IF JS EMAIL REMOVED -->
 	{% block head_js %}
 	{% endblock head_js %}
 </head>
@@ -96,15 +96,15 @@
 	</div>
 	{% endif %}
 	<div class="container">
-        <div class="statement hidden-xs">
-		<p>A Hove based small batch nano-brewery adopting a Death-or-Glory approach since 2014</p>
-        </div>
+		<div class="statement hidden-xs">
+			<p>A Hove based small batch nano-brewery adopting a Death-or-Glory approach since 2014</p>
+		</div>
 		<div id="search-bar">
 			<div class="display">
 				<form action="{% url 'search' %}" method="get">
 					<div class="search-input"> <input type="text" name="q"><span>
 					<button type="search">Search</button></span>
-                    </div>
+					</div>
 				</form>
 			</div>
 		</div>
@@ -113,15 +113,18 @@
 
 	<footer>
 
-		<div class="footer">				
-            <div class="container">
-			    <div class="col row-flex">
+		<div class="footer">
+			<div class="container">
+				<div class="col row-flex">
 					<div class="col-sm-4">
 						<div class="social-links">
 							<ul class="list-inline social-links ">
-								<li><a target="_blank" href="https://www.facebook.com/blindsidebeer/" class="hvr-pulse"><i class="fa fa-facebook"></i></a></li>
-								<li><a target="_blank" href="https://twitter.com/blindsidebeer" class="hvr-pulse"><i class="fa fa-twitter"></i></a></li>
-								<li><a target="_blank" href="https://www.instagram.com/blindsidebeer/" class="hvr-pulse"><i class="fa fa-instagram"></i></a></li>
+								<li><a target="_blank" href="https://www.facebook.com/blindsidebeer/"
+										class="hvr-pulse"><i class="fa fa-facebook"></i></a></li>
+								<li><a target="_blank" href="https://twitter.com/blindsidebeer"
+										class="hvr-pulse"><i class="fa fa-twitter"></i></a></li>
+								<li><a target="_blank" href="https://www.instagram.com/blindsidebeer/"
+										class="hvr-pulse"><i class="fa fa-instagram"></i></a></li>
 							</ul>
 						</div>
 					</div>
@@ -130,18 +133,18 @@
 							<img class="logo" src="/media/images/blindside_logo_1.PNG">
                         </a>
 					</div>
-                    <div class="copyright col-sm-4 hidden-xs">
+					<div class="copyright col-sm-4 hidden-xs">
 						<p> Copyright &copy; 2020 | Blindside Brewing </p>
 					</div>
-					
+
 				</div>
-            </div>
-        </div>    
+			</div>
+		</div>
 	</footer>
 
-<!-- Script to highlight active page in navbar to help user navigation. used with CSS #navbar .active {} -->
-<script>
-    $(function(){
+	<!-- Script to highlight active page in navbar to help user navigation. used with CSS #navbar .active {} -->
+	<script>
+		$(function(){
         $('a').each(function(){
             if ($(this).prop('href') == window.location.href) {
                 $(this).addClass('active'); $(this).parents('li').addClass('active');
@@ -176,7 +179,7 @@
 	}
 });
     
-</script>
+    </script>
 
 </body>
 

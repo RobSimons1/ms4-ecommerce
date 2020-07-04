@@ -36,7 +36,7 @@
 
 								<form method="post" action="{% url 'add_to_cart' product.id %}">
 									{% csrf_token %}
-									<div class="input-group">
+									<div class="quantity-field input-group">
 										<input name="quantity" type="number" min="1" max="999" class="form-control"
                         placeholder="Quantity" required>
 										<!-- required attribute added to placeholder to stop user sumbitting a blank string -->
@@ -92,7 +92,7 @@
 
 								<form method="post" action="{% url 'add_to_cart' product.id %}">
 									{% csrf_token %}
-									<div class="input-group">
+									<div class="quantity-field input-group">
 										<input name="quantity" type="number" min="1" max="999" class="form-control"
                         placeholder="Quantity" required>
 										<!-- required attribute added to placeholder to stop user sumbitting a blank string -->
