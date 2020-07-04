@@ -112,9 +112,9 @@
 	</div>
 
 	<footer>
-		
-				<div class="navbar navbar-masthead navbar-default navbar-fixed-bottom">
-                <div class="container">
+
+		<div class="footer">				
+            <div class="container">
 			    <div class="col row-flex">
 					<div class="col-sm-4">
 						<div class="social-links">
@@ -135,8 +135,8 @@
 					</div>
 					
 				</div>
-			</div>
-		</div>
+            </div>
+        </div>    
 	</footer>
 
 <!-- Script to highlight active page in navbar to help user navigation. used with CSS #navbar .active {} -->
@@ -148,6 +148,33 @@
             }
         });
     });
+
+    
+/* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
+ $(document).ready(function () {
+	var previousScroll = 0;
+	$(window).scroll(function () {
+		var currentScroll = $(this).scrollTop();
+		if (currentScroll < 100) {
+			showTopNav();
+		} else if (currentScroll > 0 && currentScroll < $(document).height() - $(window).height()) {
+			if (currentScroll > previousScroll) {
+				hideNav();
+			} else {
+				showNav();
+			}
+			previousScroll = currentScroll;
+		}
+	});
+
+	function hideNav() {
+		$(".navbar").removeClass("is-visible").addClass("is-hidden");
+	}
+
+	function showNav() {
+		$(".navbar").removeClass("is-hidden").addClass("is-visible").addClass("scrolling");
+	}
+});
     
 </script>
 

@@ -53,6 +53,15 @@
     background-color: #fff; 
 }
 
+nav {
+    transition: background 0.4s ease-in-out; /* Used for navbar hide on scroll */
+    background: #010101;
+}
+.is-hidden { /* Used for navbar hide on scroll */
+    opacity: 0;
+    transition: transform 0.4s, opacity 0.2s;
+}
+
 .menuitem {
     height: auto;
     text-align: center;
@@ -97,6 +106,12 @@
 
 /*------------------------------------Body*/
 
+body {
+    font-family: Arial;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
 .statement {
     padding-top: 15px;
     font-size: 20px;
@@ -118,12 +133,6 @@
 /* Input for search bar */
 .search-input {  
     margin: 0px 10px 10px 20px
-}
-
-body {
-    font-family: Arial;
-    padding-top: 100px;
-    padding-bottom: 100px;
 }
 
 .icon-bar {
@@ -229,17 +238,11 @@ caption p {
 
 /*-----------------------------------Footer*/
 
-footer {
-    margin-top: 40px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    border-top: 1px solid #ededed;
-    color: #A9A9A9;
-}
-
-.navbar-fixed-bottom {
-    display: inline-block;
-    background-color: #FFFFFF;
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;   
+  background-color: #FFFFFF;
 }
 
 .copyright {
