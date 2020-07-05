@@ -247,7 +247,7 @@ caption p {
   position: fixed;
   bottom: 0;
   width: 100%;   
-  background-color:;
+  background-color:; /* Remove if not required */
   margin-top: auto;
 }
 
@@ -258,11 +258,13 @@ caption p {
     text-align: center;
     display: block;
     font-weight: bolder;
+    opacity: 0.8;
 }
 
 .footer-logo {
     text-align: center;
     display: block;
+    opacity: 0.3;
 }
 
 .social-links {
@@ -282,6 +284,7 @@ caption p {
     font-size: 30px; /* Controls size of fontawesome icon was 40px */
     line-height: 25px;    
     color: #1B1919;   
+    opacity: 0.9;
     transition: all 0.35s ease-in-out;
     -moz-transition: all 0.35s ease-in-out;
     -webkit-transition: all 0.35s ease-in-out;
