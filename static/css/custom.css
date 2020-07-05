@@ -141,7 +141,7 @@ body {
 
 .quantity-field {
     width: 200px;
-    float: left;
+    float: left center;
 }
 
 .accountform {
