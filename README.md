@@ -25,18 +25,25 @@ The link for the Github repository is:
 In order to make the user experience as easy and enjoyable as possible I opted for a simple looking site that is easy to navigate using the 
 navigation bar buttons Shop, Register, Log In and Cart for the unathenticated user and Shop, Contact, Profile, Log Out and Cart for the 
 authenticated user. Django provides a useful notification bar below the Navbar that alerts the user to when an action such as logging in or 
-out is succesful.
+out is successful.
 
 There is a search bar below the Navbar that the user can type in any word to search the products currently available. Each of the Blindside Brewing 
 logos in the header and the footer act as links to the homepage and there are active links to Blindside Brewings Facebook, Twitter and Instagram 
 pages in the footer. 
 
 The user must be registered and logged in in order to make an actual purchase on the site. To register the user needs to complete the registration form 
-on the registration page which requests a Username, Email address, Password and password confirmation. The user also must confirm that they are over the 
+on the registration page which requests a Username, Email address, Password and Password confirmation. The user also must confirm that they are over the 
 legal drinking age by checking the Yes button. Once this is checked the `Create Account` button becomes live allowing the user to continue on the Shop / 
 homepage provided the rest of the form is completed correctly. 
 
-If the user wishes to add a product to their shopping cart they 
+If the user wishes to add a product to their shopping cart they can do so by selecting the quantity field in the individual product paneland either using
+the up / down arrows or inputing a number and pressing the `Add` button. This will add the specified quantity to the cart the total items is visually 
+displayed on the cart icon in the navbar. The user can then select the Cart page that diplays the selected products, quantities and total price. The user 
+can adjust the quantity in the quantity field and pressing the `Amend` button. If the value is set to zero the specified product will be deleted from the 
+cart. If the user is happy with the products and quantities in their cart, they can proceed to the Checkout page using the `Checkout` button. Here the 
+chosen products and total price are shown. The user can input their card payment details and in the Payment Details fields provided. then press the 
+`Submit Payment` button. Provided the payment is successful the user will be redirected to the hompage and a green notification banner will be diplayed 
+telling the user that they have successfully paid.  
 
 The original concepts for the web-app pages can be seen in the *supporting_docs folder* under *blindside_brewing_database_schema.png*, 
 *wireframe1_product_page.png*, *wireframe2_login_page.png*, *wireframe3_register_page.png*, *wireframe4_cart_page.png* and *wireframe5_checkout_page.png*. 
