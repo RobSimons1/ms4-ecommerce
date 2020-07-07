@@ -1,16 +1,16 @@
 [![Build Status](https://travis-ci.org/RobSimons1/ms4-ecommerce.svg?branch=master)](https://travis-ci.org/RobSimons1/ms4-ecommerce)
 
-# Blindside-Brewing Web-Application 
+# Blindside-Brewing Site 
 
-This web-app is designed to allow the user to manipulate the data Oceanographic Dictionary records stored in MongoDB. The user is able to create, 
-locate, display, edit and delete records in line with CRUD functionality. 
+This Full-Stack site is designed to allow the user to peruse and purchase products available form Blindside Brewing that are stored in the Django database. 
+In the cart section the of the site, the user is able to create, locate, display, edit and delete items in the cart in line with CRUD functionality. 
+The user needs to be registered and logged in, in order to advance to the checkout page of the site where card details can be entered and payments 
+made using STRIPE. 
 
-The web-app is easy to use and allows the user to input their own words, categories and definitions into the database. The user can search for 
-existing words in the database, as well as display existing and new words. Also, the user is able to edit current words and categories, as well as 
-delete them. 
+The site is easy to use and allows the authenticated user a range of options including the ability to send an email to the site owner using the contact 
+form and view their own profile. 
 
-The purpose of the web-app is to ultimately build a large database of Oceanographic words, categories and definitions that will allow people to better 
-understand the oceanic environment and all of the associated elements.
+The purpose of the site is to ultimately to sell Blindside Brewing products and make the user experience as easy and pleasurable as possible.
 
 The link for the app is: 
 
@@ -22,31 +22,26 @@ The link for the Github repository is:
 
 ## UX
 
-In order to make the user experience as easy and enjoyable as possible I opted for a simple looking site that is easy to navigate 
-using the navigation bar buttons (Home, Browse Words, New Word and Manage Categories). There is also a search bar within the Navbar 
-that the user can type in any word to search, as well as individual letters that are themselves links to all words beginning with the 
-selected letter. The user is also able to add a new word using the floating green button to the left of the Navbar, as well as utilise 
-links provided in the card placed on the right of the homepage (Words, New Word and Categories). Additionally, there are a selection of 
-links in the footer that will assist the user to easily navigate the pages. A paragraph in the center of the Homepage explains what the
-web-app is about.
+In order to make the user experience as easy and enjoyable as possible I opted for a simple looking site that is easy to navigate using the 
+navigation bar buttons Shop, Register, Log In and Cart for the unathenticated user and Shop, Contact, Profile, Log Out and Cart for the 
+authenticated user. Django provides a useful notification bar below the Navbar that alerts the user to when an action such as logging in or 
+out is succesful.
 
-Once the user browses a word using any of the available search facilities, they can then see the category to which that word belongs, as 
-well view the drop down definition by pressing the button. There are also button options to edit or delete the word. A warning will present 
-it's self to the user if they press the delete button.
+There is a search bar below the Navbar that the user can type in any word to search the products currently available. Each of the Blindside Brewing 
+logos in the header and the footer act as links to the homepage and there are active links to Blindside Brewings Facebook, Twitter and Instagram 
+pages in the footer. 
 
-To add a word the user is taken to the Add Word page where they can select an appropriate category, input the word and input the definition.
-the user then presses the Add Word button to submit the information to the database. The operation can also be cancelled using the cancel button.
-Either action will return the user to the Browse Words page that is sorted in alphabetical order.
+The user must be registered and logged in in order to make an actual purchase on the site. To register the user needs to complete the registration form 
+on the registration page which requests a Username, Email address, Password and password confirmation. The user also must confirm that they are over the 
+legal drinking age by checking the Yes button. Once this is checked the `Create Account` button becomes live allowing the user to continue on the Shop / 
+homepage provided the rest of the form is completed correctly. 
 
-The Manage Categories page allows the user to view all categories in alphabetical order and then either delete or edit an existing category 
-using the buttons provided or add a new Category that will be submitted to the database. If editing the category, the user has the option to 
-either save their changes or cancel the operation. Again, if the delete button is pressed a warning message will be displayed. 
+If the user wishes to add a product to their shopping cart they 
 
-The original concepts for the web-app pages can be seen in the *supporting_docs folder* under *oceanic_dictionary_database_schema.png*, 
-*wireframe1_oceanic_dictionary_home.png*, *wireframe2_ oceanic_dictionary_browse_words.png*, *wireframe3_ oceanic_dictionary_manage_categories.png* 
-and unused *wireframe4_ oceanic_dictionary_manage_categories.png*. These were created in Balsamiq. There are numerous changes since these  wireframes, 
-mainly due to learning more about the capabilities of Python, Flask and MongoDB. There is also a database scehma showing the original idea 
-for the project.
+The original concepts for the web-app pages can be seen in the *supporting_docs folder* under *blindside_brewing_database_schema.png*, 
+*wireframe1_product_page.png*, *wireframe2_login_page.png*, *wireframe3_register_page.png*, *wireframe4_cart_page.png* and *wireframe5_checkout_page.png*. 
+These were created in Balsamiq. There are numerous changes since these  wireframes, mainly due to learning more about the capabilities of Python and Django. 
+There is also a database scehma showing the original idea for the project.
 
 The web-app is aimed at users who share an interest in the ocean and oceanographic words, particularly those who would like to understand 
 the spelling or definition of a word, or to which oceanographic category it belongs. 
