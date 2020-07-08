@@ -109,22 +109,16 @@ registration page.
 * **Cart Page –** If there are no items in the Cart and the user selects the Cart page, they will be presented with a message saying 'No items in your cart' 
 and a `Continue Shopping` button that redirects back to the Shop page. If the user has items in thir cart they will be displayed in the Cart page along with 
 the options to `Amend` the quantity, `Checkout`, or `Continue Shoppping`. The total of the users cart is shown. If the user amends a products quantity to zero,
-the item will be removed from the cart. Once an item is added to the cart the total quantity is displayed on the Cart icon in the Navbar.
+the item will be removed from the cart. Once an item is added to the cart the total quantity is displayed on the Cart icon in the Navbar. If the user is not 
+authorised and selects the `Checkout` button, they will be redirected to the Login page.
 
-* **Add Word –** When the user selects the Add Word green button in te Navbar or New Word from any of the links they will be taken to the Add Word page 
-where they are given a blank form to fill in beginning with choosing a word category from the dropdown list, then inputting the word, followed by 
-inputting the definition. Once the form is completed the user can submit the word to the database using the Add Word button or cancel the operation 
-using the Cancel button. Either button will take the user back to the Browse Words page. If the user inputs a word that already exists in the database 
-they will receive an error message stating "This item already exists in the database".
-
-* **Categories –** When the user selects Manage Categories from the Navbar or any of the Categories links, they are taken to the Categories page. This 
-page displays all of the existing categories in alphabetical order. 
-
-* **Contact Page –**  
+* **Contact Page –** The Contact page allows the user to send a message to the site owner by completing the form that requests the users email and message. This 
+is forwarded directly to the site owner and the user is notified by a green notification success message banner. 
 
 * **Profile Page –** 
 
-* **Logout Page –**  
+* **Logout Navbar Button –**  If pressed the user will be logged out from the site and all items in the cart will dissapear, as the user is taken back to the 
+unathorised user homepage. The user is notified by a green notification success message banner that they have successfully logged out. 
 
 ### Features left to implement
 
