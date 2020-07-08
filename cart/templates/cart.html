@@ -37,10 +37,9 @@
 </div>
 <div class="row">
     {% if cart_items %}
-    show
 
-    <p>Total</p>
-    <p><span class="glyphicon glyphicon-euro" aria-hidden="true"></span>{{ total }}</p>
+    <h3>Total</h3>
+    <h3><span class="glyphicon glyphicon-euro" aria-hidden="true"></span>{{ total }}</h3>
     <a href="{% url 'checkout' %}" class="btn btn-success" role="button"><span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span>Checkout</a>
     <span><a href="{% url 'index' %}" class="btn btn-primary" role="button"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>Continue Shopping</a></span>
 </div>

@@ -50,8 +50,8 @@ The original concepts for the web-app pages can be seen in the *supporting_docs 
 These were created in Balsamiq. There are numerous changes since these  wireframes, mainly due to learning more about the capabilities of Python and Django. 
 There is also a database scehma showing the original idea for the project.
 
-The web-app is aimed at users who share an interest in the ocean and oceanographic words, particularly those who would like to understand 
-the spelling or definition of a word, or to which oceanographic category it belongs. 
+The site is aimed at users who have an interest in craft beers and it is hope that the success of the company will increase by having an online facility for 
+customers to purchase their products. 
 
 ## Features
 
@@ -92,7 +92,7 @@ and press the `Add` button, to add items to the Cart.
 
 * **Footer –** The Footer is defensively designed to show only the active social links (Facebook, Twitter and Instagram) on smaller screen sizes. The 
 larger screen resolutions show another homepage Blindside Brewing logo link and the Copyright info. The background for the fixed footer was left opaque, 
-as again this allows the user to view more of the page and use more of the iput fields on smaller resolutions.  
+as again this allows the user to view more of the page and use more of the input fields on smaller resolutions.  
 
 * **Success Message Bar –** When the user performs an action that requires confirmation, such as logging in or out, or sending a message via the contact 
 form, a green notification banner will appear below the Navbar to tell the user that the operation was successfull.
