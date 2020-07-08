@@ -59,12 +59,14 @@ the spelling or definition of a word, or to which oceanographic category it belo
 
 The choice of features, links and buttons available to the user are:
 
-* **Nav Bar –** Contains homepage link in the title of the page that is animated and highlited when the user hovers on it to draw atttention to 
-the page title. Below the title is a floating Add Word button which will direct the user to the Add Word page. In the centre of the Navbar is a 
-Search bar that the user is able to type any word in to and search the database, this is highlighted by the green search button. The search bar 
-will bring up all words related to the specified search that are in the database. The Navbar links that are Home, Browse Words, New Word and Manage 
-Categories. Direct the user to these specific pages. The links are hilighted and pulse when they are hovered on to make it clear to the user that 
-they are links.
+* **Nav Bar –** Contains Blindside Brewing logo that is also a homepage link. The Navbar is designed to dissapear when the user scrolls down 
+and reappear wehn the user scrolls up. This is a defensive mobile first design that allows a better view of the actual page on smaller screens.
+
+* **Unauthorised User Nav Bar –** Contains Blindside Brewing logo that is also a homepage link. The Navbar links available to the unauthorised 
+user are Shop, Register, Login and Cart. This is a limmited range of links that allows the the user to peruse the available products, but mainly
+directs the user towards either logging via the Login page or egistering via the Registration page. The links are hilighted and pulse when they 
+are hovered on to make it clear to the user that they are links. Also, the current page that the user is on is highlighted in the Navbar for ease 
+of navigation.
 
 * **Side Nav Bar –** This becomes available on smaller screen types and is present in the form of the radio style menu icon in the top left 
 corner of the Navbar. Once the icon is clicked the Side Navbar presents itself with all the links that are hidden in smaller view (e.g. Home, 
