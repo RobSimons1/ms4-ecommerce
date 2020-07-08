@@ -60,33 +60,35 @@ the spelling or definition of a word, or to which oceanographic category it belo
 The choice of features, links and buttons available to the user are:
 
 * **Nav Bar –** Contains Blindside Brewing logo that is also a homepage link. The Navbar is designed to dissapear when the user scrolls down 
-and reappear wehn the user scrolls up. This is a defensive mobile first design that allows a better view of the actual page on smaller screens.
+and reappear wehn the user scrolls up. This is a defensive mobile first design that allows a better view of the actual page (e.g. Shop page) on 
+smaller screens.
 
 * **Unauthorised User Nav Bar –** Contains Blindside Brewing logo that is also a homepage link. The Navbar links available to the unauthorised 
 user are Shop, Register, Login and Cart. This is a limmited range of links that allows the the user to peruse the available products, but mainly
-directs the user towards either logging via the Login page or egistering via the Registration page. The links are hilighted and pulse when they 
+directs the user towards either logging via the Login page or registering via the Registration page. The links are hilighted and pulse when they 
 are hovered on to make it clear to the user that they are links. Also, the current page that the user is on is highlighted in the Navbar for ease 
 of navigation.
 
-* **Side Nav Bar –** This becomes available on smaller screen types and is present in the form of the radio style menu icon in the top left 
-corner of the Navbar. Once the icon is clicked the Side Navbar presents itself with all the links that are hidden in smaller view (e.g. Home, 
-Browse Words, New Word and Manage Category) that direct the user to the specified page. The links are highlighted and pulse when hovered on  
-to make it clear to the user that they are links.
+* **Authorised User Nav Bar –** Contains Blindside Brewing logo that is also a homepage link. The Navbar links available to the authorised 
+user are Shop, Contact, Profile, Log Out and Cart. These links are designed to allow the user thorough interaction with the site and communication 
+with the site owner. The links are hilighted and pulse when they are hovered on to make it clear to the user that they are links. Also, the current 
+page that the user is on is highlighted in the Navbar for ease of navigation.
+
+* **Side Nav Bar –** This becomes available on smaller screen types and is present in the form of the radio style menu icon in the top right 
+corner of the Navbar. Once the icon is clicked the Side Navbar presents itself with all the links that are hidden in smaller view dependant on the 
+users authorisation status that direct the user to the specified page. The links are highlighted and pulse when hovered on to make it clear to the 
+user that they are links. The Navbar is designed to dissapear when the user scrolls down and reappear wehn the user scrolls up. This is a defensive 
+mobile first design that allows a better view of the actual page (e.g. Shop page) on smaller screens.
 
 * **Individual Letter Links –** Each letter of the alphabet is represented by it's upper and lower case character. The individual letters are 
 highlighted when hovered over to make the user aaware that they are links. Once clicked the user will be directed to a page that shows all words 
 beginning with the specified letter listed in alphabetical order. Form there the user can see the associated category and definition and edit or 
 delete the words.
 
-* **Wave Picture –** The picture of the wave is the basis for all the colours used in the web-app. All colours utilised are colour picked from 
-the wave picture.
+* **Mission Statement –** This paragraph located below the Navbar on larger screen views gives a brief synopsis of Blindside Brewing. What they do
+and when they began. 
 
-* **Homepage Paragraph –** This paragraph informs the user of the web-apps purpose by briefly explaining the many things that can be found in 
-our oceans.
-
-* **Basic Card –** The card has a second explanation of the web-app and tells the user what they are able to to do with regards to the functions 
-available (e.g. browse, search, edit and delete words. Also, categories can be added, managed and edited). There are three links available to the 
-user on the card, which are Words, New Word and Categories.
+* **Search Bar –** 
 
 * **Footer –** The Footer has yet another brief paragraph explainin the web-app and its functionality, as well as links to Home, Browse Words, 
 New Word and Manage Categories. These are available in the Footer on every ppage of the web-app.
