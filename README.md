@@ -80,34 +80,36 @@ users authorisation status that direct the user to the specified page. The links
 user that they are links. The Navbar is designed to dissapear when the user scrolls down and reappear wehn the user scrolls up. This is a defensive 
 mobile first design that allows a better view of the actual page (e.g. Shop page) on smaller screens.
 
-* **Individual Letter Links –** Each letter of the alphabet is represented by it's upper and lower case character. The individual letters are 
-highlighted when hovered over to make the user aaware that they are links. Once clicked the user will be directed to a page that shows all words 
-beginning with the specified letter listed in alphabetical order. Form there the user can see the associated category and definition and edit or 
-delete the words.
-
-* **Mission Statement –** This paragraph located below the Navbar on larger screen views gives a brief synopsis of Blindside Brewing. What they do
+* **Mission Statement –** This paragraph located below the Navbar on larger screen resolutions gives a brief synopsis of Blindside Brewing. What they do
 and when they began. 
 
-* **Search Bar –** 
+* **Search Bar –** The Search bar is available on all pages for the user to search for a specific beer by name. This has been included, as it is expected 
+that eventually there will be a vast amount of products on the site. 
 
-* **Footer –** The Footer has yet another brief paragraph explainin the web-app and its functionality, as well as links to Home, Browse Words, 
-New Word and Manage Categories. These are available in the Footer on every ppage of the web-app.
+* **Individual Product Panels –** Each individual product has its own panel, inwhich the information stored in the database is presented for each 
+specific product (e.g. Name, Description, Info, Blurb, Size, Alcohol, Price and Image). The user can input the quantity they require for each product 
+and press the `Add` button, to add items to the Cart.
 
-* **Word Results –** When the user searches for a word using the search bar or the individual letters they are dircted to the Word Results page 
-that will show all resultant words. Each word has it's own box and within the box is displayed the word in bold, as well as the associated Category.
-then the word again.
+* **Footer –** The Footer is defensively designed to show only the active social links (Facebook, Twitter and Instagram) on smaller screen sizes. The 
+larger screen resolutions show another homepage Blindside Brewing logo link and the Copyright info. The background for the fixed footer was left opaque, 
+as again this allows the user to view more of the page and use more of the iput fields on smaller resolutions.  
 
-* **Definition Button –** The large definition button and dropdown selector to its left in each individual word box will display the words definition 
-in the drop-down when selected. This is so that the user can choose if they wish to see certain definitions and not all are displayed on screen at 
-once. The button pulses when hovered on.
+* **Success Message Bar –** When the user performs an action that requires confirmation, such as logging in or out, or sending a message via the contact 
+form, a green notification banner will appear below the Navbar to tell the user that the operation was successfull.
 
-* **Edit Word Button –** The Edit button in each individual word box takes the user to the Edit Word page. Here the user is shown the existing details 
-of the word from the database (e.g. Word Category, Input Word and Input Definition). The user is able to edit any of these details by then pressing 
-the Edit Word button. There is also an opportinity to cancel the operation by pressing the Cancel button. Once the user either edits the word or cancels 
-the operation, they are taken back to the Browse Words page. 
+* **Register Page –** The registration page allows the user to register with the site by providing a username, email address, password and password 
+confirmation. They will also need to confirm that they are over the legal drinking age by checking the `Yes` radio button, which in turn activates the 
+`Create Account` button. If the user already has an account, they can use the `Sign In` link at the top of the page. 
 
-* **Delete Word Button –** The Delete Button in each individual word box gives the user the opportunity to delete the word and associated category from 
-the database completely. Once pressed a message is diplayed asking the user if they are sure they want to delete this word?
+* **Login Page –** The Login page provides the user with a form where they can login using their username or email and password. There is a link for the user 
+if they have forgotten their password that takes them to the Django Password reset page. On this page the user inputs their email address and an email is then 
+sent to them allowing them to reset their password and then login to the site. There is also a `Don't have an account?` link that takes the user to the 
+registration page.
+
+* **Cart Page –** If there are no items in the Cart and the user selects the Cart page, they will be presented with a message saying 'No items in your cart' 
+and a `Continue Shopping` button that redirects back to the Shop page. If the user has items in thir cart they will be displayed in the Cart page along with 
+the options to `Amend` the quantity, `Checkout`, or `Continue Shoppping`. The total of the users cart is shown. If the user amends a products quantity to zero,
+the item will be removed from the cart. Once an item is added to the cart the total quantity is displayed on the Cart icon in the Navbar.
 
 * **Add Word –** When the user selects the Add Word green button in te Navbar or New Word from any of the links they will be taken to the Add Word page 
 where they are given a blank form to fill in beginning with choosing a word category from the dropdown list, then inputting the word, followed by 
@@ -118,18 +120,11 @@ they will receive an error message stating "This item already exists in the data
 * **Categories –** When the user selects Manage Categories from the Navbar or any of the Categories links, they are taken to the Categories page. This 
 page displays all of the existing categories in alphabetical order. 
 
-* **Add Category Button –** This button directs the user to a page with a single line form where they can input the name of a new category. Once the 
-form is completed the user can submit the category to the database using the Add Category button or cancel the operation using the Cancel button. 
-Either button will take the user back to the Categories page. If the user inputs a category that already exists in the database they will receive an 
-error message stating "This item already exists in the database". 
+* **Contact Page –**  
 
-* **Delete Category Button –** The Delete Button to the left of each individual category on the Categories page gives the user the opportunity to delete 
-the category from the database completely. Once pressed a message is diplayed asking the user if they are sure they want to delete this category?
+* **Profile Page –** 
 
-* **Edit Category Button –** The Edit button to te far left of each individual category on the Categories page takes the user to the Edit Category page. 
-Here the user is shown the existing category from the database. The user is able to edit this detail by then pressing the Edit Category button. There is 
-also an opportinity to cancel the operation by pressing the Cancel button. Once the user either edits the category or cancels 
-the operation, they are taken back to the Categories page. 
+* **Logout Page –**  
 
 ### Features left to implement
 
