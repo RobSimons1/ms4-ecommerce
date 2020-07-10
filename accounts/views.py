@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, HttpResponseRedirect
 from django.contrib import messages, auth
 from django.core.urlresolvers import reverse
-from .forms import UserLoginForm, UserRegistrationForm, ContactForm
+from .forms import UserLoginForm, UserRegistrationForm, ContactForm, OrderForm
 from django.template.context_processors import csrf
 from django.contrib.auth.decorators import login_required
 from django.core.mail import send_mail
@@ -80,7 +80,11 @@ def login(request):
 @login_required
 def profile(request):
     """A view that displays the profile page of a logged in user"""
-    return render(request, 'profile.html')
+    order_form = OrderForm()
+    if request.method == "POST":
+        order_form = OrderForm(request.POST)        
+
+    return render(request, "profile.html", {"order_form": order_form})
 
 
 def register(request):

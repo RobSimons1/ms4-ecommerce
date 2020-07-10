@@ -1,6 +1,22 @@
 {% extends "base.html" %}
+{% load bootstrap_tags %}
+
 {% block content %}
     <h2>Hi fellow Blindsider</h2>
     <p>Dear {{ user.username }}, We hope you are enjoying our fine quality Ales!</p>
     <p>You are logged in as {{ user.email }} </p>
+
+    <form role="form" method="post" id="profile-form" action="{% url 'profile' %}">
+    <legend>{{ user.username }} Details</legend>
+
+    <div class="form-group col-md-6">
+        {{ order_form | as_bootstrap }}
+    </div>
+
+    {% csrf_token %}
+    <div class="form-group col-md-12">
+        <input class=" btn btn-primary" id="submit_payment_btn" name="commit" type="submit" value="Submit Payment">
+    </div>
+</form>
+
 {% endblock %}
