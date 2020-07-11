@@ -10,12 +10,12 @@
     <legend>{{ user.username }} Details</legend>
 
     <div class="form-group col-md-6">
-        {{ order_form | as_bootstrap }}
+        {{ user_form | as_bootstrap }}
     </div>
 
     {% csrf_token %}
     <div class="form-group col-md-12">
-        <input class=" btn btn-primary" id="submit_payment_btn" name="commit" type="submit" value="Submit Payment">
+        <input class=" btn btn-primary" id="submit_payment_btn" name="commit" type="submit" value="Update Profile">
     </div>
 </form>
 

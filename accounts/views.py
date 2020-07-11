@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, HttpResponseRedirect
 from django.contrib import messages, auth
 from django.core.urlresolvers import reverse
-from .forms import UserLoginForm, UserRegistrationForm, ContactForm, OrderForm
+from .forms import UserLoginForm, UserRegistrationForm, ContactForm, UserProfileForm
 from django.template.context_processors import csrf
 from django.contrib.auth.decorators import login_required
 from django.core.mail import send_mail
@@ -80,11 +80,27 @@ def login(request):
 @login_required
 def profile(request):
     """A view that displays the profile page of a logged in user"""
-    order_form = OrderForm()
+    User_form = UserProfileForm()
     if request.method == "POST":
-        order_form = OrderForm(request.POST)        
+        user_form = UserProfileForm(request.POST)  
+        if user_form.is_valid():
+            user_form.save() 
 
-    return render(request, "profile.html", {"order_form": order_form})
+            user = auth.authenticate(username=request.POST['username'],
+                                     password=request.POST['password1'])
+
+            if user:
+                auth.login(request, user)
+                messages.success(request, "You have successfully updated your profile information")
+                return redirect(reverse('index'))
+
+            else:
+                messages.error(request, "unable to update profile at this time!")
+    else:
+        user_form = UserProfileForm()     
+
+    args = {'user_form': user_form}
+    return render(request, "profile.html", args)
 
 
 def register(request):

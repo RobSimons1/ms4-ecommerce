@@ -4,7 +4,7 @@ from django.contrib.auth.forms import UserCreationForm
 from django.core.exceptions import ValidationError
 from checkout.models import Order
 
-class OrderForm(forms.ModelForm):
+class UserProfileForm(forms.ModelForm):
 
     class Meta:
         model = Order
