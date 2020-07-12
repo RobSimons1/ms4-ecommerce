@@ -2,17 +2,6 @@ from django import forms
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
 from django.core.exceptions import ValidationError
-from checkout.models import Order
-
-class UserProfileForm(forms.ModelForm):
-
-    class Meta:
-        model = Order
-        fields = (
-            'full_name', 'phone_number', 'country', 'postcode',
-            'town_or_city', 'street_address1', 'street_address2',
-            'county'
-        )
 
 class ContactForm(forms.Form):
     user_email = forms.EmailField(help_text='A valid email address, please.')
