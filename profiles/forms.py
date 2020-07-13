@@ -7,6 +7,7 @@ class UserProfileForm(forms.ModelForm):
     class Meta:
         model = UserProfile
         exclude = ('user',)
+        widgets = {'date': forms.HiddenInput()}
 
     def __init__(self, *args, **kwargs):
         """
