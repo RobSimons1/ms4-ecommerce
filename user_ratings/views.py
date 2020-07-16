@@ -4,7 +4,7 @@ from .forms import ItemForm
 from django.contrib import messages
 
 # Create your views here.
-def get_todo_list(request):
+def get_review_list(request):
     results = Item.objects.all()
     return render(request, "user_reviews.html", {
         'items': results
@@ -18,6 +18,6 @@ def create_an_item(request):
         new_item.save()
         messages.success(request, 'Thankyou for your review')
 
-        return redirect(create_an_item)
+        return redirect(get_review_list)
 
     return render(request, "user_ratings.html")
