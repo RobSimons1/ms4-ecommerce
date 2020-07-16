@@ -2,8 +2,24 @@
 
 {% block content %}
 
+<div class="container">
 <div class="col row-flex">
 
-<h1>User Ratings</h1>
+<h1>Add User Ratings</h1> 
+
+    <form method="POST">
+
+            {% csrf_token %}
+            
+            <label for="id_name">Name:</label><br>
+            <input type="text" id="id_name" name="name" /><br>
+            <br>
+            <label for="id_done">Done:</label><br>
+            <input type="checkbox" id="id_done" name="done" /><br>
+            <br>
+            <button type="submit">Save</button>
+        </form>
+</div>
+</div>
 
 {% endblock %}
