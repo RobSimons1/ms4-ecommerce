@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container">
+<div class="col row-flex">
+
+   <h1>Things I need to do...</h1>
+
+        <table>
+
+            {% for item in items %}
+            <tr>
+                {% if item.done %}
+                <td><strike>{{ item.name }}</strike></td>
+                {% else %}
+                <td>{{ item.name }}</td>
+                {% endif %}
+            </tr>
+            {% empty %}
+            <p>You have nothing to do.</p>
+            {% endfor %}
+        </table>
+        <a href=" /user_ratings/add">Add an item</a> <!-- Add link to user_ratings --> 
+</div>
+</div>
+
+{% endblock %}

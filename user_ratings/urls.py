@@ -1,6 +1,7 @@
 from django.conf.urls import url
-from .views import create_an_item
+from .views import get_todo_list, create_an_item
 
 urlpatterns = [
-    url(r'^add$', create_an_item), # user_ratings urls import 
+    url(r'^get_todo_list', get_todo_list),
+    url(r'^add$', create_an_item), # user_ratings urls import
 ] 

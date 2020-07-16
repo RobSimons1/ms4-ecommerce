@@ -21,6 +21,7 @@ from search import urls as urls_search
 from checkout import urls as urls_checkout
 from profiles import urls as urls_profile # Profiles urls import
 from user_ratings import urls as urls_user_ratings # user_ratings urls import
+from user_ratings.views import get_todo_list # user_ratings urls import
 from products.views import all_products
 from django.views import static
 from .settings import MEDIA_ROOT

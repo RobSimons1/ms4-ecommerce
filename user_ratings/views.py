@@ -1,7 +1,14 @@
 from django.shortcuts import render, HttpResponse, redirect
 from .models import Item
+from .forms import ItemForm
 from django.contrib import messages
 
+# Create your views here.
+def get_todo_list(request):
+    results = Item.objects.all()
+    return render(request, "user_reviews.html", {
+        'items': results
+    })
 
 def create_an_item(request):
     if request.method == "POST":
