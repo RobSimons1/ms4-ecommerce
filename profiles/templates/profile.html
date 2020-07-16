@@ -5,10 +5,9 @@
 <div class="container">
 
 
-	<h2>Hi fellow Blindsider</h2>
-	<p>Dear {{ user.username }}, We hope you are enjoying our fine quality Ales!</p>
+	<h2>Hi {{ user.username }},</h2>
 	<p>You are logged in as {{ user.email }} </p>
-
+    <p>Here you are able to notify us of your name and address details for use in future purchases of our Delicious Ales</p>
 
 	<form role="form" method="post" id="profile-form" action="{% url 'profile' %}">
 		<legend>{{ user.username }} Profile Details</legend>

@@ -7,7 +7,7 @@ class UserProfileForm(forms.ModelForm):
     class Meta:
         model = UserProfile
         exclude = ('user',)
-        widgets = {'date': forms.HiddenInput()}
+        widgets = {'date': forms.HiddenInput()} # Widget that hides the date field, so that the user cannot update 
 
     def __init__(self, *args, **kwargs):
         """
