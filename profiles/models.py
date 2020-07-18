@@ -22,8 +22,8 @@ class UserProfile(models.Model):
     date = models.DateTimeField(default=datetime.now, blank=True)
 
     def __str__(self):
-        return "{0}-{1}-{2}".format(self.id, self.date, self.full_name)
-
+        return self.user.username
+        
 @receiver(post_save, sender=User)
 def create_or_update_user_profile(sender, instance, created, **kwargs):
     """

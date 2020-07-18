@@ -5,12 +5,12 @@ from django.core.exceptions import ValidationError
 
 class ContactForm(forms.Form):
     user_email = forms.EmailField(help_text='A valid email address, please.')
-    message = forms.CharField(max_length=500, help_text='500 characters max.')
+    message = forms.CharField(widget=forms.Textarea)
         
 
 class UserLoginForm(forms.Form):
     username_or_email = forms.CharField()
-    password = forms.CharField(widget=forms.PasswordInput)
+    password = forms.CharField(widget=forms.PasswordInput) # widget added for text area that alters Charfield to box style
 
 
 class UserRegistrationForm(UserCreationForm):
