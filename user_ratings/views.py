@@ -12,10 +12,13 @@ def get_review_list(request):
 
 def create_an_item(request):
     if request.method == "POST":
-        new_item = Item()
-        new_item.name = request.POST.get('name')
-        new_item.done = 'done' in request.POST
-        new_item.save()
+        new_item = ItemForm(request.POST) # post the new_item to the ItemForm
+        if new_item.is_valid():
+            new_item.instance.name = request.POST.get('name') # instance passes keyword argument to the model whose relations will be edited in the formset
+            new_item.instance.beer = request.POST.get('beer')
+            new_item.instance.review = request.POST.get('review')
+            new_item.instance.done = 'done' in request.POST
+            new_item.save()
         messages.success(request, 'Thankyou for your review')
 
         return redirect(get_review_list)
