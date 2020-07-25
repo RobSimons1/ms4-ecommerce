@@ -5,7 +5,7 @@
 <div class="container">
 <div class="col row-flex">
 
-   <h1>User Reviews</h1>
+   <h1>User Reviews for {{ product }}</h1>
 
         <table>
 
@@ -20,11 +20,11 @@
                 <td>{{ item.rating }}</td>
                 {% endif %}
             </tr>
-            {% empty %}
-            <p>You have nothing to do.</p>
+            
             {% endfor %}
         </table>
-        <a href=" /user_ratings/add">Add an item</a> <!-- Add link to user_ratings --> 
+       <a href="{% url 'create_an_item' product.id %}">Add an item</a> <!-- Add link to create an item  --> 
+
 </div>
 </div>
 
