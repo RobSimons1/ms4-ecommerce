@@ -1,12 +1,11 @@
 from django.db import models
 from products.models import Product # Imported for product specific review
-#from .forms import ItemForm # from .views import new_item # Imported for product specific review
+from django.utils import timezone
 
 # Create your models here.
 
 class Item(models.Model):
-    
-    name = models.CharField(max_length=200, blank=False)
+    name = models.CharField(max_length=200, blank=False, default='')
     beer = models.CharField(max_length=500, default='', blank=False)
     review = models.TextField(max_length=2000, default='', blank=False)
     RATING_CHOICES = (
@@ -20,6 +19,7 @@ class Item(models.Model):
                                       choices=RATING_CHOICES,
                                       default="3")
     done = models.BooleanField(blank=False, default=False)
+    date = models.DateTimeField(default=timezone.now, blank=True)
 
     def __str__(self):
         return self.name

@@ -23,7 +23,7 @@
                 <form method="post" action="{% url 'get_review_list' product.id %}">
 									{% csrf_token %}									
 										<span>
-                            <button type="submit">Reviews</button>
+                            <button type="submit">Reviews for {{ product.name }} </button>
                         </span>
 
 						</form>
@@ -68,7 +68,7 @@
                 <form method="post" action="{% url 'get_review_list' product.id %}">
 									{% csrf_token %}									
 										<span>
-                            <button type="submit">Reviews</button>
+                            <button type="submit">Reviews for {{ product.name }}</button>
                         </span>
 
 						</form>
@@ -95,7 +95,7 @@
                 <form method="post" action="{% url 'get_review_list' product.id %}">
 									{% csrf_token %}									
 										<span>
-                            <button type="submit">Reviews</button>
+                            <button type="submit">Reviews for {{ product.name }}</button>
                         </span>
 
 						</form>

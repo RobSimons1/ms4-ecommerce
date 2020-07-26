@@ -241,6 +241,10 @@ caption p {
     margin-right: 15px;
 }
 
+.reviewitem {
+    list-style-type: none;
+}
+
 /*-----------------------------------Footer*/
 
 .footer {
