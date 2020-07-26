@@ -5,6 +5,8 @@ from django.utils import timezone
 # Create your models here.
 
 class Item(models.Model):
+    product = models.ForeignKey(
+        Product, on_delete=models.SET_NULL, null=True, blank=True, related_name='item')
     name = models.CharField(max_length=200, blank=False, default='')
     beer = models.CharField(max_length=500, default='', blank=False)
     review = models.TextField(max_length=2000, default='', blank=False)
@@ -24,11 +26,9 @@ class Item(models.Model):
     def __str__(self):
         return self.name
 
-class ReviewLineItem(models.Model):
+class ItemLineItem(models.Model):
     """ Model to add specific review to specific product item """
-    # product = models.OneToOneField(Product, on_delete=models.CASCADE, primary_key=True, default="")
-    product = models.ForeignKey(Product, null=False, default='')
-    #new_item = models.ForeignKey(ItemForm, null=False, default='') # Added to try and get new_item 
+    product = models.ForeignKey(Product, null=False)
     item = models.ForeignKey(Item, null=False, default='') # Added to try and get item 
 
     def __str__(self):

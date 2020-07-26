@@ -1,12 +1,12 @@
 from django.contrib import admin
-from .models import Item, ReviewLineItem
+from .models import Item, ItemLineItem
 
-class ReviewLineAdminInline(admin.TabularInline):
-    model = ReviewLineItem
+class ItemLineAdminInline(admin.TabularInline):
+    model = ItemLineItem
 
 
 class ReviewAdmin(admin.ModelAdmin):
-    inlines = (ReviewLineAdminInline, )
+    inlines = (ItemLineAdminInline, )
 
 # Register your models here.
 admin.site.register(Item, ReviewAdmin)
