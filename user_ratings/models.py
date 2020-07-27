@@ -8,7 +8,6 @@ class Item(models.Model):
     product = models.ForeignKey(
         Product, on_delete=models.SET_NULL, null=True, blank=True, related_name='item')
     name = models.CharField(max_length=200, blank=False, default='')
-    beer = models.CharField(max_length=500, default='', blank=False)
     review = models.TextField(max_length=2000, default='', blank=False)
     RATING_CHOICES = (
         ("1", '1'),

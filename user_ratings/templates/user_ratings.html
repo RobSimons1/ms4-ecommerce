@@ -5,23 +5,24 @@
 <div class="container">
 <div class="col row-flex">
 
-<h1>Add User Review for {{ product }}</h1> 
+<h1>Add User Review for {{ product }} </h1> 
 
     <form method="POST">
 
             {% csrf_token %}
+            <div class="product" style="background-image: url('{{ MEDIA_URL }}{{ item.product.image }}')"></div>
             
-            <label for="id_name">Name:</label><br>
-            <input type="text" id="id_name" name="name" /><br>
+            <label for="{{ product.id }}">Product:</label><br>
+            <input type="text" id="{{ product.id }}" value="{{ product }}" name="product" /><br>
             <br>
-            <label for="id_beer">Beer:</label><br>
-            <input type="text" id="id_beer" name="beer" /><br>
+            <label for="{{ user.username }}">Name:</label><br>
+            <input type="text" id="{{ user.username }}" value="{{ user.username }}" name="name" /><br>
             <br>
             <label for="id_review">Review:</label><br>
             <input type="text" id="id_review" name="review" /><br>
             <br>
             <label for="id_rating">Rating:</label><br>
-            <input type="number" id="id_rating" name="rating" /><br>
+            <input type="number" min="1" max="5" id="id_rating" name="rating" /><br>
             <br>
             <label for="id_done">Done:</label><br>
             <input type="checkbox" id="id_done" name="done" /><br>

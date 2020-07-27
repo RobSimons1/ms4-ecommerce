@@ -5,8 +5,8 @@ class ItemLineAdminInline(admin.TabularInline):
     model = ItemLineItem
 
 
-class ReviewAdmin(admin.ModelAdmin):
+class ItemAdmin(admin.ModelAdmin):
     inlines = (ItemLineAdminInline, )
 
 # Register your models here.
-admin.site.register(Item, ReviewAdmin)
+admin.site.register(Item, ItemAdmin)
