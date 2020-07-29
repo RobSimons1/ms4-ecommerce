@@ -115,7 +115,9 @@ authorised and selects the `Checkout` button, they will be redirected to the Log
 * **Contact Page –** The Contact page allows the user to send a message to the site owner by completing the form that requests the users email and message. This 
 is forwarded directly to the site owner and the user is notified by a green notification success message banner. 
 
-* **Profile Page –** 
+* **Profile Page –** The Profile page allows the user to 
+
+* **User Review Page –** 
 
 * **Logout Navbar Button –**  If pressed the user will be logged out from the site and all items in the cart will dissapear, as the user is taken back to the 
 unathorised user homepage. The user is notified by a green notification success message banner that they have successfully logged out. 
@@ -125,22 +127,6 @@ unathorised user homepage. The user is notified by a green notification success 
 * User can view each category and associated words separately by clicking `category name`. This will bring up all words under one category.
 
 * User can currently input upper and lower case versions of the same into `word` and `category`. Possibly implementing a `Text Index` will fix this?
-
-* Individual words in `Browse Words` page to be spilt up into there own individual letter and not one continous list of all words in alphabeitical order. Could potentially add a `Back to Top` button after every Letter instance?
-
-* User `LOGIN` and `REGISTER` options to be implemented for better security and traceability.
-
-* `Back to top` button to be implemented in `Browse Words` page and `Categories` page to allow user to easliy return to the top of the page. 
-
-* Voting on words Page with thumbs `up` and `down` functions detailed in Wireframe4. Difficult to implement without user login credentials.
-
-* `Text Index` could improve overall user experience if implemented?
-
-* `Comments` and `Messaging` services originally planned in Wireframes. Difficult to implement without user login credentials.
-
-* Online `Store` originally planned in Wireframes. Difficult to implement without user login credentials.
-
-* Currently the user is able to submit a `blank form` to the database. Would like to implement a flashed error message to prevent this.
 
 ## Technologies Used
 The languages, frameworks, libraries and other tools utilised for building this web-app are:
@@ -154,10 +140,20 @@ during the development of the web-app.  https://github.com/
 * **Heroku -** This is a cloud based application platform that allows deployment of an application to the web and connection to the database. 
 https://heroku.com/
 
-* **Mongo DB Atlas -** This is a general purpose, document based, distributed database with scalability and flexability. https://www.mongodb.com/
+* **SQlite3 -** SQLite is a C-language library that implements a small, fast, self-contained, high-reliability, full-featured, SQL database engine. 
+SQLite is the most used database engine in the world. https://www.sqlite.org/index.html
 
-* **PyMongo -** This is a Python distribution containing tools for working with MongoDB, and is the recommended way to work with MongoDB from 
-Python, as an API for MongoDB intergration. https://api.mongodb.com/
+* **PostgreSQL -** PostgreSQL is a powerful, open source object-relational database system. https://www.postgresql.org/
+
+* **Django 1.11.29 -** Django is a high-level Python Web framework that encourages rapid development and clean, pragmatic design. 
+https://www.djangoproject.com/
+
+* **Travis CI -** Continuous Intergration Testing
+
+* **AWS S3 -** Amazon Simple Storage Service (Amazon S3) is an object storage service that offers industry-leading scalability, data availability, 
+security, and performance. https://aws.amazon.com/s3/
+
+* **Balsamiq -** fUsed for design of ireframes. https://balsamiq.com/
 
 ### Front-End Technologies
 
@@ -166,10 +162,14 @@ better understanding.
 
 * **CSS3 -** The web-app uses CSS3 for styling of elements within the website. It is linked from the page to the *style.css* file.
 
-* **Materialize 0.100.2 -** The open-source Materialize framework has been used to implement the layout of the web-app. Materialize is also 
-utilised to accommodate the responsive and mobile first design of the web-app. http://archives.materializecss.com/0.100.2/about.html
+* **Bootstrap 3.7.7 -** The open-source Bootstrap framework has been used to implement the layout of the site. Bootstrap is also utilised 
+to accommodate the responsive and mobile first design of the dashboard. https://getbootstrap.com/
+
+* **Django-forms-bootstrap 3.1.0 -**  A simple bootstrap filter for Django forms. Extracted from the bootstrap theme.
+https://django-bootstrap3.readthedocs.io/en/latest/
 
 * **JavaScript -** The web-app uses Javascript to provide dynamic interactivity, as it is a full-fledged versatile programming language.
+https://www.javascript.com/
 
 * **jQuery -** The web-app uses jQuery, as it simplifies a lot of complicated tasks from JavaScript, such as AJAX calls and DOM manipulation. 
 https://www.jquery.com/jquery-3.4.1
@@ -181,20 +181,26 @@ https://www.jquery.com/jquery-3.4.1
 * **Python 3.1 -** Python emphasises readability, uses English keywords and is highly extensible. The core language itself is quite small, 
 and it is easy to learn for brginners. https://www.python.org/  
 
-* **Flask -** This is a lightweight Web Server Gateway Interface (WSGI) web application framework. There is little boilerplate code for 
-getting a simple app up and running.
+* **Gunicorn 20.0.4 -** Gunicorn ‘Green Unicorn’ is a Python WSGI HTTP Server for UNIX. The Gunicorn server is broadly compatible with 
+various web frameworks, simply implemented, light on server resources, and fairly speedy. https://docs.gunicorn.org/en/stable/
+
+* **Pillow 7.1.1 -** The Python Imaging Library adds image processing capabilities to your Python interpreter. This library provides
+extensive file format support, an efficient internal representation, and fairly powerful image processing capabilities. 
+https://pillow.readthedocs.io/en/stable/handbook/overview.html
+
+* **Psycopg2 2.8.5 -** Psycopg is the most popular PostgreSQL database adapter for the Python programming language. Its main features are 
+the complete implementation of the Python DB API 2.0 specification and the thread safety. https://pypi.org/project/psycopg2/ 
+
+* **boto3 1.14.5 -** Boto is the Amazon Web Services (AWS) SDK for Python. It enables Python developers to create, configure, and manage AWS 
+services, such as EC2 and S3. https://boto3.amazonaws.com/v1/documentation/api/latest/index.html
 
 * **Jinja -** This is a modern and designer-friendly templating language for Python. It is fast, widely used and secure with the optional 
-sandboxed template execution environment. 
+sandboxed template execution environment. https://jinja.palletsprojects.com/en/2.11.x/
 
-* **dnspython -** This is a toolkit for Python that supports almost all record types and allows the new style connection string for MongoDB 
-Atlas to be utilised.
+* **Stripe 2.46.0 -** Checkout creates a secure, Stripe-hosted payment page that lets you collect payments quickly. It works across devices 
+and is designed to increase conversion. Checkout makes it easy to build a first-class payments experience. 
+https://stripe.com/docs/payments/checkout
 
-* **Flask-PyMongo -** This allows Flask to communicate with Mongo. It is optimized to work with Flask.
-
-* **itsdangerous -** This is used to cryptographically sign and customize how the data is serialised.
-
-* **Werkzeug -** This is a comprehensive Web Server Gateway Interface (WSGI) web application library.
 
 ## Testing
 
@@ -371,8 +377,8 @@ functioned correctly or easily find lost pieces of code.
      `from os import path`
       `if path.exists("env.py"):`
       `import env` 
-  6. Now that your environment variables have been set in your env.py file, and the file has been imported into your project, you can use them as needed using the following syntax:  
-     `MONGODB_NAME = os.environ.get('MONGODB_NAME')`
+  6. Now that your environment variables have been set in your env.py file, and the file has been imported into your project, you can use them as needed, for example using the following syntax:  
+     `DATABASES = {'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))}`
 
 ### To deploy the project to Heroku the following steps were taken:
 
@@ -393,8 +399,10 @@ functioned correctly or easily find lost pieces of code.
   9. To connect an existing repository from Github to Heroku use the following CLI syntax: `heroku git:remote -a [followed by name of Heroku app]`
   10. To push to Heroku Master Branch, then simply use `git push heroku master`
   11. To scale dynos and run the app in Heroku, use the CLI command: `heroku ps:scale web=1`
-  12. In order for the server instance on Heroku to know how to run our Flask application, we need to specify IP and Port in Heroku. To do this go to `Settings` 
-      tab > `Config Variables` and input: `IP Address: 0.0.0.0`; `Port: 5000`  
+  12. In order for the server instance on Heroku to know how to run our application, we need to specify a few Config Vars in Heroku. To do this go to `Settings` 
+      tab > `Config Variables` and input: `AWS_ACCESS_KEY_ID`; `AWS_SECRET_ACCESS_KEY`; `DATABASE_URL`; `DISABLE_COLLECTSTATIC`; `EMAIL_ADDRESS`; `EMAIL_PASSWORD`
+      `EMAIL_PASSWORD`; `SECRET_KEY`; `STRIPE_PUBLISHABLE`; `STRIPE_SECRET`.  
+  13.      
 
 ## Credits 
 

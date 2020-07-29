@@ -1,7 +1,7 @@
 from django import forms 
-from .models import Item
+from .models import Review
 
 class ItemForm(forms.ModelForm):
     class Meta:
-        model = Item
-        fields = ('name', 'review', 'rating', 'done', 'date')
+        model = Review
+        fields = ('name', 'review', 'rating', 'date',)
