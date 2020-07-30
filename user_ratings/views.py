@@ -3,19 +3,17 @@ from .models import Review
 from .forms import ItemForm
 from django.contrib import messages
 from products.models import Product # Imported for product specific review
-
 from datetime import datetime
 
 # Create your views here.
 
 def get_review_list(request, id):
     product = get_object_or_404(Product, pk=id)
-    
+    review = Review.objects.filter(date__lte=datetime.now()).order_by('-date')
     return render(request, "user_reviews.html", {
         'product': product,
+        'review': review,
         
-        
-
     })    
 
 def create_an_item(request, id):

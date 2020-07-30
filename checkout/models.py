@@ -7,7 +7,8 @@ from profiles.models import UserProfile
 
 class Order(models.Model):
     user_profile = models.ForeignKey(
-        UserProfile, on_delete=models.SET_NULL, null=True, blank=True, related_name='order')    
+        UserProfile, on_delete=models.SET_NULL,
+        null=True, blank=True, related_name='order')
     full_name = models.CharField(max_length=50, blank=False)
     phone_number = models.CharField(max_length=20, blank=False)
     country = models.CharField(max_length=40, blank=False)

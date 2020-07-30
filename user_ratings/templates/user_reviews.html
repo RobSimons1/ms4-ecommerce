@@ -7,28 +7,32 @@
 
 		<h1>User Reviews for {{ product }} </h1>
 		<a href="{% url 'create_an_item' product.id %}">Add an item</a> <!-- Add link to create an item  -->
-        <div class="row product" style="background-image: url('{{ MEDIA_URL }}{{ product.image }}')"></div>
-        <span><h3>{{ product.name }}</h3>
+		<div class="row product" style="background-image: url('{{ MEDIA_URL }}{{ product.image }}')"></div>
+		<span><h3>{{ product.name }}</h3>
                 <p class= "brewery-name">Blindside Brewing</p>
                 <p class="product-description">{{ product.description }}</p></span>
-                
+
 		<table>
-            
+
 			{% for item in items %}
 			<ul>
-				{% if item.done %}
+
 
 				<div class="caption">
-                    <h3>{{ item.product.name }}</h3>
+					<h3>{{ item.product.name }}</h3>
 					<li class="reviewitem">Name: {{ item.name }}</li>
 					<li class="reviewitem">Review: {{ item.review }}</li>
-					<li class="reviewitem"><h5>Rating out of 5:</h5> {{ item.rating }}</li>
-					<li class="reviewitem"><h5>Date:</h5> {{ item.date }}</li>					
+					<li class="reviewitem">
+						<h5>Rating out of 5:</h5> {{ item.rating }}
+					</li>
+					<li class="reviewitem">
+						<h5>Date:</h5> {{ item.date }}
+					</li>
 					<br>
-                {% endif %}
-            </ul>
+                </div>
+			</ul>
 
-					{% endfor %}
+			{% endfor %}
 		</table>
 		<a href="{% url 'create_an_item' product.id %}">Add an item</a> <!-- Add link to create an item  -->
 

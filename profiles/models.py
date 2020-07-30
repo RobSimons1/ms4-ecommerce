@@ -7,8 +7,9 @@ from django.utils import timezone
 
 # Create your models here.
 
+
 class UserProfile(models.Model):
-    """ A User profile model for maintaining 
+    """ A User profile model for maintaining
     delivery information and order history """
 
     user = models.OneToOneField(User, on_delete=models.CASCADE)
@@ -24,7 +25,8 @@ class UserProfile(models.Model):
 
     def __str__(self):
         return self.user.username
-        
+
+
 @receiver(post_save, sender=User)
 def create_or_update_user_profile(sender, instance, created, **kwargs):
     """

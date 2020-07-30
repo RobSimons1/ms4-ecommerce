@@ -148,7 +148,8 @@ SQLite is the most used database engine in the world. https://www.sqlite.org/ind
 * **Django 1.11.29 -** Django is a high-level Python Web framework that encourages rapid development and clean, pragmatic design. 
 https://www.djangoproject.com/
 
-* **Travis CI -** Continuous Intergration Testing
+* **Travis CI -** Built to integrate with GitHub and Heroku. Using OAuth for authentication. Travis syncs users permissions to the repositories 
+you want them to have access to. Allowing  greater control over security and to scale out your build infrastructure as needed.
 
 * **AWS S3 -** Amazon Simple Storage Service (Amazon S3) is an object storage service that offers industry-leading scalability, data availability, 
 security, and performance. https://aws.amazon.com/s3/
@@ -378,7 +379,7 @@ functioned correctly or easily find lost pieces of code.
       `if path.exists("env.py"):`
       `import env` 
   6. Now that your environment variables have been set in your env.py file, and the file has been imported into your project, you can use them as needed, for example using the following syntax:  
-     `DATABASES = {'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))}`
+     `DATABASES = {'ENGINE': 'django.db.backends.sqlite3', 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),}`
 
 ### To deploy the project to Heroku the following steps were taken:
 
@@ -402,7 +403,10 @@ functioned correctly or easily find lost pieces of code.
   12. In order for the server instance on Heroku to know how to run our application, we need to specify a few Config Vars in Heroku. To do this go to `Settings` 
       tab > `Config Variables` and input: `AWS_ACCESS_KEY_ID`; `AWS_SECRET_ACCESS_KEY`; `DATABASE_URL`; `DISABLE_COLLECTSTATIC`; `EMAIL_ADDRESS`; `EMAIL_PASSWORD`
       `EMAIL_PASSWORD`; `SECRET_KEY`; `STRIPE_PUBLISHABLE`; `STRIPE_SECRET`.  
-  13.      
+  13. The following syntax will need to be added to your settings.py file to access the SECRET KEY for the new database URL `DATABASES = {'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))}`
+  14. The Database can then be migrated to the Heroku Postgres (postgresql) database using the the commands `mmakemigrations` and `migrate` from the command line.      
+  15. Once the build in Heroku is complete, click the `Open app` button.
+  16. Objects can then be added to the new postgres database using the Admin Panel and logging in with your superuser credentials.  
 
 ## Credits 
 

@@ -3,14 +3,16 @@ from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
 from django.core.exceptions import ValidationError
 
+
 class ContactForm(forms.Form):
     user_email = forms.EmailField(help_text='A valid email address, please.')
     message = forms.CharField(widget=forms.Textarea)
-        
+
 
 class UserLoginForm(forms.Form):
     username_or_email = forms.CharField()
-    password = forms.CharField(widget=forms.PasswordInput) # widget added for text area that alters Charfield to box style
+    password = forms.CharField(widget=forms.PasswordInput)
+    # widget added for text area that alters Charfield to box style
 
 
 class UserRegistrationForm(UserCreationForm):
