@@ -12,8 +12,8 @@
             {% csrf_token %}
             <div class="product" style="background-image: url('{{ MEDIA_URL }}{{ product.image }}')"></div>
             
-            <label for="{{ product.id }}">Product:</label><br>
-            <input type="text" id="{{ product.id }}" value="{{ product }}" name="product" /><br>
+            <label for="id_product">Product:</label><br>
+            <input type="text" id="id_product" value="{{ product.id }}" name="product" /><br>
             <br>
             <label for="{{ id_name }}">Name:</label><br>
             <input type="text" id="{{ id_name }}" name="name" /><br>
