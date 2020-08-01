@@ -5,7 +5,7 @@
 <div class="container">
 <div class="col row-flex">
 
-<h1>Add User Review for {{ product }} </h1> 
+<h1>Add a review for {{ product }} </h1> 
 
     <form method="POST">
 
@@ -14,20 +14,27 @@
             
             <label for="id_product">Product:</label><br>
             <input type="text" id="id_product" value="{{ product.id }}" name="product" /><br>
-            <br>
+            <br> 
             <label for="{{ id_name }}">Name:</label><br>
-            <input type="text" id="{{ id_name }}" name="name" /><br>
+            <input type="text" id="{{ id_name }}" value="{{ user.username }}" name="name" required/><br> <!--Auto updates name with username if logged in-->
             <br>
             <label for="id_review">Review:</label><br>
-            <input type="text" id="id_review" name="review" /><br>
+            <input type="text" id="id_review" name="review" required/><br>
             <br>
             <label for="id_rating">Rating:</label><br>
-            <input type="number" min="1" max="5" id="id_rating" name="rating" /><br>
+            <input type="number" min="1" max="5" id="id_rating" name="rating" required/><br>
             <br>
             
             <button type="submit">Save</button>
         </form>
 </div>
 </div>
+
+<script>
+
+$('label[for=id_product], input#id_product').hide(); // Hide <label for="id_product"... from View, as this shows Product ID //
+
+</script>  
+
 
 {% endblock %}
