@@ -9,7 +9,7 @@ from datetime import datetime
 
 def get_review_list(request, id):
     product = get_object_or_404(Product, pk=id)
-    reviews = Review.objects.all().filter(product=product)
+    reviews = Review.objects.all().filter(product=product, date__lte=datetime.now()).order_by('-date')
     return render(request, "user_reviews.html", {
         'product': product,
         'items': reviews
@@ -19,7 +19,7 @@ def get_review_list(request, id):
 def create_an_item(request, id):
     product = get_object_or_404(Product, pk=id)
     
-    reviews = Review.objects.all().filter(product=product)
+    reviews = Review.objects.all().filter(product=product, date__lte=datetime.now()).order_by('-date')
     if request.method == "POST":        
         new_item = ItemForm(request.POST) # post the new_item to the ItemForm
         if new_item.is_valid():
