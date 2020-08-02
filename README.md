@@ -131,9 +131,9 @@ unathorised user homepage. The user is notified by a green notification success 
 
 ### Features left to implement
 
-* User can view each category and associated words separately by clicking `category name`. This will bring up all words under one category.
+* .
 
-* User can currently input upper and lower case versions of the same into `word` and `category`. Possibly implementing a `Text Index` will fix this?
+* .
 
 ## Technologies Used
 The languages, frameworks, libraries and other tools utilised for building this web-app are:
@@ -346,32 +346,32 @@ tutors, chat forums and such like, whom were asked during various stages of the 
 
   | Issue  |                 Description                     |       Solution                      |  
   | ------ |:-----------------------------------------------:|:-----------------------------------:|
-  |   1    |Attempted to set up Text Index in app.py to allow search bar to function correctly following MongoDB Manual, but was unable to get this to work as db can only have ONE index, and by doing it in the python file, it will create an index per each search, and errors.|Instead used `$regex": query` method, which works for my data|
-  |   2    |Results of search bar search not displaying all first letter cases (e.g. 'A'and 'a') |`case_sensitive=false` added to Python function|
-  |   3    |Results of individual letter searches needed to ignore capitalisation of first letter |`letter='^A'` added to Python functions for each letter|
-  |   4    |`More Links` tab in Footer is intended for external links such as FaceBook, Twitter etc. |Due to time constraints these links have not been set up|
-  |   5    |Flashed message that appears when a user inputs a duplicate new Word or Category only appears for words and categories capitalised in the exact same way as already in the database |In order to correct this all words and categories would have to enter the database in the same case letters. Due to time constraints it was not possible to write this functionality|
-  |   6    |Issues with some Materialize elements not able to target in CSS (e.g. Colour of individual letter Aa, Bb etc) |Had to leave in-line HTML (e.g. `a class="blue-grey-text"`|
-  |   7    |Try to separate each different Letter in the `Browse Words` page, so that all words associated with that letter are listed under a title (e.g. Aa) |Jinja does not appear to have enough logic to complete this task, including seeing the difference between 'A' and 'a' for example.|
-  |   8    |`Upvoting functionality`, where the  user is able to vote on a specific word, as intended in Wireframe4 and button in Wireframes Header |It appears that this is a function that requires Login/Authentification that I have not had time to implement these |
-  |   9    |Login / Authentification` buttons as shown in wireframes |Due to time constraints, I was not abe to implement these|
+  |   1    |||
+  |   2    |||
+  |   3    |||
+  |   4    |||
+  |   5    |||
+  |   6    |||
+  |   7    |||
+  |   8    |||
+  |   9    |||
   |   10   |Explorer displaying the |Decided to leave this, as browser being phased out and rarely used |
-  |   11   |Switched IDE midway through project fron AWS Cloud9 to Gitpod |This was time slightly time consuming, as had to learn working of the new IDE |
-  |   12   |Initially `Browse Words` page displayed words in case sensitive order, so that words beginning upper case would superseed words beginning lower case, no matter what the second letter of the word was |`case_sensitive=false` added to Python function|
-  |   13   |Initially a link to an online store was planned in the Header of the Wireframes |Due to time constraints and possible Login / Authentification issues, this was not possible |
-  |   14   |Needed to validate CSS for debugging purposes | Utilised jigsaw.W3 CSS Validator. one warning: Imported style sheets are not checked in direct input and file upload modes. This can be ignored, as a does not affect import or code |
-  |   15   |Could not resize SideNav Radio Button to appear larger on smaller devices | Can target with CSS using `.button-collapse`, but can only change color. Have left this as general size and colouris adequate in smaller resolutions |
-  |   16   |Needed to validate HTML in all .html pages for debugging purposes | Utilised W3 HTML Markup Validation Service, which returns multiple errors where the syntax '{}' has been used. This is Jinja that has been populated via flask. Therefore, it is not HTML and these errors can be ignored. The method used was to view the page source code in the web-app for each .html page and copy this code in to the validator, as it is pure HTML code. |
-  |   17   |`Materalize` versus `W3 HTML Markup Validation Service`  |Only one main error in `W3 HTML Markup Validation Service`: `Error: Element div not allowed as child of element ul in this context`. The Materialize Official Documentation (https://materializecss.com/collapsible.html) allows `divs` within a `ul` for a `collapsible` element. Therefore, I have left these features in, as cannot find a better way to list the items without them overlapping (e.g. Word Results)|
+  |   11   |||
+  |   12   |||
+  |   13   |||
+  |   14   |||
+  |   15   |||
+  |   16   |||
+  |   17   |||
   |   18   |Needed to validate Python (app.py) for debugging purposes| Utilised PEP8 online checker. All code successfully updated and passed |
-  |   19   |Initially the `Wave picture` and `Basic Card` were going to appear on each page of the web-app, as in the Wireframes|Decided against this because it was unnecessary|
-  |   20   |`Comments and Messaging service` originlly planned in Wireframes Footer  |Due to time constraints and possible Login / Authentification issues, this was not possible|
-  |   21   |Are Python Flask and Jinja functions self explanatory |Added further comments to app.py file|
-  |   22   |Is HTML semantic and self explanatory  | Added further comments to index.html file |
-  |   23   |Blank form input | The User should not be able to input a blank form in to the database using the fields in `add_word` and `add_category`. Due to time constraints this prevntion haas not been implemented |
-  |   24   |Issue with `Search Button` moving accross rows on smaller resolutions  | Utilised `col s3 offset-m1 offset-l2 center active` to make the `Search Bar` and `Search Icon` remain on the same row in all resolutions |
-  |   25   |When inspecting smaller resolutions on a PC using `Dev Tools` there is a large amount of white space between the `Main Section` and the `Footer` | When tested on actual devices (e.g. iPhone 5/SE, iPhone 6/7/8), there was not the same large amount of white space. Therefore have left the Materialize margins as they are  |  
-  |   26   |Finally, add non-test data in to the database  | web-app thoroughly tested in Heroku deployed version for `CRUD` functionality, by deleting test database inputs and inputting actual words, categories and definitions |
+  |   19   |||
+  |   20   |||
+  |   21   |||
+  |   22   |Is HTML semantic and self explanatory  | Added further comments to html files |
+  |   23   |||
+  |   24   |||
+  |   25   |||  
+  |   26   |||
 
 ## Deployment
 
