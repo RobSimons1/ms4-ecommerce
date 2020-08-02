@@ -251,49 +251,78 @@ The main basic functions of the site that required rigorous testing in different
     individual product by the Foreign Key and Primary Key. To test the funcionality of this feature extensive print statements were added to the `create_an_item` 
     function that checked that the form was valid and if so saved utilising Django's 'The Save() Method'.
 
-
 *	**Quantity Denominator Field** 
     * This field inserts a selected number of each individual product into the Cart. Validation of this can be seen when the user presses the `Add` button and the number 
-    quantity of items can be seen in the Cart Icon in the Navbar. This is the case on larger resolution screens, but notfor smaller resolutions where the Cart Menu Icon is 
+    quantity of items can be seen in the Cart Icon in the Navbar. This is the case on larger resolution screens, but not for smaller resolutions where the Cart Menu Icon is 
     not immediately available. Once the user views the Cart page. all of the selected items will be shown with their aquired quantity.
 
 *	**Registration Form** 
+    * In the Registration Page the user can set up an account by inserting a Username, Email Address, Password and Password Confirmation. The form automatically cross 
+    checks the the validity of the Email Address and Password Confirmation. There is an optional link for the user to Sign In if they already have an account.
 
 *	**Registration - Legal Age Checker** 
+    * A JavaScript Event Listener is used to disable the `Create Account` button, until the User confirms that they are of a legal drinking age. This is doen by clicking 
+    the `Yes` radio button that in turn enables the `Create Account` button and allows the user to proceed and access all of the features available for an authenticated user. 
+    This function has been extensively tested.
 
 *	**Login Page** 
+    * A user who has already registered can log in to the site via the `Log in` Navbar menu item. This page authenticates the user against those stored in the database. 
+    A verified user will be logged in otherwise the relevant errors will be presented. There is a Forgotten password link and a link ofor a user who is not registered.   
+
+*   **Password Reset Page**
+    * if a user has prevbiously registered to the site they can insert their email address into the field and reset their password. An email is sent via smtp.gmail.com to the 
+    users email address. This functionality has been tested utilising multiple email addresses. The link in the email allows the user to create a new password and confirm. 
+    Once completed the user is directed back to the Login Page where they are able to login with thier email address or user name and password.This function has been 
+    rigorously tested.
 
 *	**Cart Page** 
-
-*	**Cart - Amend Quantity Button** 
-
-*	**Cart - Total Shopping Amount**
-
-*	**Cart - Checkout Button** 
-
-*	**Cart - Continue Shopping Button**
-
-*	**Checkout Page**
-
-*	**Checkout - Payment Details Form**
-
-*	**Checkout - Payment Card Info Form**
-
-*	**Checkout - Submit Payment Button**
-
-*	**Contact Page**
-
-*	**Contact - User Email Field**
-
-*	**Contact - Message Field**
-
-*	**Contact - Send Message Button**
+    * The Cart page displays the products that the user has selected to purchase and the total shopping price (This is in the currency of Euros, as the site is intended for 
+    European distribution). The user can amend the quantity of the products to be purchased using the `Qty` field. If the user reduces this to zero and presses the `Amend` 
+    button, the product will be deleted from their cart. This function has been extensively tested. The 'Total' figure has been calculated by the ID's and quantities of each 
+    product within the /cart/views.py/ and has been tested repeatidly. The `Checkout` button directs the usher to the Checkout page and the `Continue Shopping` button takes 
+    the user back to the Homepage with their pre-requested items still in the Cart.
 
 *	**Profile Page - Form**
+    * This form allows the usher to update their credentials (e.g. Name, Phone Number, Country and Address). This information will be stored under the 'User Profile' information 
+    in the Django database and can be utilised to pre-populate fields in the Checkout page. The `Date` field is hidden from the user in the html page using a widget, so the user 
+    does not overtype the date and time.   
 
-*	**Profile - Update Profile Button**
+*	**Checkout Page**
+    * The Checkout page displays the products that the user has selected to purchase, their related quantities and prices, and the total shopping price. These elements have 
+    been tested and return the correct figures.  
+
+*	**Checkout - Payment Details Form**
+    * The Checkout Payment Details form is directly linked to the Stripe payment API and allows the user to input their Name, Phone and Address details (if the user has already 
+    registered their Profile details, these fields will be prepopulated).  
+
+*	**Checkout - Payment Card Info Form**
+    * The user is able to input their Credit card information to purchase the selected quantities of products. This function has only been tested using Stripes dummy card 
+    information that consists of `Credit card number` 4242424242424242; `Security Code` 123; `Month` A month in advance of current month; `Year` a year in advance of the 
+    current year. This functionality has been tested and can be checked in the /admin/home/checkout/orders/ section of the Admin panel. These payments are also visible on the
+    https://dashboard.stripe.com/payments page. This confirms all the payments that have been passed through the system. The payment will not submit through the `Submit Payment` 
+    button if the card information is incorrect.
+
+*	**Checkout - Submit Payment Button**
+    * Submits the Payment and returns the user to the Homepage with the Django success banner 'You have successfully paid'. If payment is not successful, the user will be not 
+    leave the Checkout page.
+
+*	**Contact Page**
+    * The Contact page allows the user to email the site host through the smtp.gmail.com host server. The user can input their email address and a message that will be sent directly 
+    to the email adress of the site owener. The format of the email received by the owner of the site is as follows: `From` field will display 'Blindside Brewing' followed by the 
+    email address of the sender. The site host can respond to the user with the information given. The message itself is displayed in the correct field in the email received.
+    The setup of the smpt.gmail does not allow usual email formatting, therefore this method must be utilised. An attempt was made to utilise 'sendEMAIL.js', but the same email 
+    formatting issues were apparent, with the exception that a link to reply to the senders email is at the bottom of the email. There was a limit on the amount of emails that 
+    could be sent through the system server that ultimately aided in the decision to not use this method.
 
 
+*	**Travis CI 4.3.0**
+    * Travis is utilised through the .travis.yml file to check the integrity of the code. Travis hooks up to Github and Heroku and allows the site owner to  view detailed information on intricate production and 
+    backend information associated with the site. Any build errors will not pass and the resultant details will be sent to the site owner via email and displayed in the relevant Github 
+    page as `build:failed`. 
+
+*	**AWS S3**
+    * The AWS S3 allows access to stored files within the site owners AWS bucket that are shared through the users AWS account. The accompanying AWS info is linked through the relavant AWS info in the 
+    `settings.py` file. The testing of this functionality is shown in the availability of the stored data in the post prodution database andsite.
 
 *	**W3 Nu Html Checker** 
     * All .html files require validation through the online checker. This ensures that the code is more legible and does 
@@ -384,7 +413,7 @@ functioned correctly or easily find lost pieces of code.
   1. created a Heroku account @ https://signup.heroku.com/
   2. Create `requirements.txt` file in Gitpod workspace for Heroku to understand installation files to run app. From CLI type type 
      `pip3 freeze --local > requirements.txt`.
-  3. To install the Heroku command line on Gitpod or AWS Cloud9, use the following command `npm install -g heroku`
+  3. To install the Heroku command line on Gitpod, use the following command `npm install -g heroku`
   4. Using the `New` buton, Create a new app with apropriate title and server in Heroku. This creates a connection between the Gitpod application and Heroku that would allow us 
      to push our changes using Git to update the application at any given time. 
   5. To login to Heroku from the CLI, use the command `heroku login`
