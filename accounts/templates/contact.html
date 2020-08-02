@@ -2,20 +2,20 @@
 {% load bootstrap_tags %}
 {% block content %}
 
-    <form method="POST" action="{% url 'contact' %}" class="accountform">
+<form method="POST" action="{% url 'contact' %}" class="accountform">
 	<fieldset class="form-group">
 		<legend>Contact Us</legend>
 		<p>Hi {{ user.username }}, Please feel free to message us about colaborations or beer stuff</p>
 		{% csrf_token %}
 		{{  user_form | as_bootstrap }}
 
-        <button id="myBtn" type="submit" class="btn btn-success">Send Message</button>      
+		<button id="myBtn" type="submit" class="btn btn-success">Send Message</button>
 
 	</fieldset>
-    
-    <!-- ALSO REMOVE sendEMAIL.js FROM /static/js/sendEmail.js & Line 12 base.html that is link -->
 
-    <!-- code for js email send used with sendEmail.js in static folder 
+	<!-- ALSO REMOVE sendEMAIL.js FROM /static/js/sendEmail.js & Line 12 base.html that is link -->
+
+	<!-- code for js email send used with sendEmail.js in static folder 
     <section class="container-fluid">
         <div class="row bg-color-contact">
             <div>

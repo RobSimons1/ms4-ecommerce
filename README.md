@@ -115,9 +115,16 @@ authorised and selects the `Checkout` button, they will be redirected to the Log
 * **Contact Page –** The Contact page allows the user to send a message to the site owner by completing the form that requests the users email and message. This 
 is forwarded directly to the site owner and the user is notified by a green notification success message banner. 
 
-* **Profile Page –** The Profile page allows the user to 
+* **Profile Page –** The Profile page allows the registered user to insert their name and address credentials, in order that these details can be prepopulated 
+within the Users Checkout Form.  
 
-* **User Review Page –** 
+* **User Review for a specified product page –** Within each individual product panel is an option to view the Reviews. Once the link is clicked, the user will be 
+taken to the user_ratings page that lists all of the previous reviews about that specific product. These reviews display the Name (if user is registered, their 
+Username); Review of the selected product; Rating out of five; Date / Time of review.  
+
+* **Add User Review for a specified product page –** On this page the User has the choice of three fields. If the user is registered and logged in, the 'Name' field 
+is pre-populated with the uername of the User. Once the Review and Rating fields are complete and submitted, the User's review will be saved to the database and 
+presented in the Reviews page.
 
 * **Logout Navbar Button –**  If pressed the user will be logged out from the site and all items in the cart will dissapear, as the user is taken back to the 
 unathorised user homepage. The user is notified by a green notification success message banner that they have successfully logged out. 
@@ -205,97 +212,68 @@ https://stripe.com/docs/payments/checkout
 
 ## Testing
 
-The main basic functions of the web-app that required rigorous testing in different scenarios are listed below.
+The main basic functions of the site that required rigorous testing in different scenarios are listed below.
 
 *	**Navbar** 
-    * All Navbar links and buttons are coded within the Header section of the base.html with associated Python functions set up in app.py. 
-    * Check Title link words (Oceanographic and Dictionary) return user to Homepage in every instance by ensuring that the index (/show_words) page is 
-      returned to. This is valid for both the words 'Oceanographic' and 'Dictionary', as thay are split across two separate rows. 
-    * Green `Add Word` button is configured to redirect the user to the Add Word page. Verified the link and left side positioning in all browsers and 
-      screen sizes. 
-    * The Search Bar required rigourous testing due to the varoius ways the words in Mongo DB could be accessed and displayed (See Issues List #1).
-    * Green magnifying glass icon `Search` button next to the search bar activates the entry into the Search Bar. This has been tested and affixed in place 
-      to maintain its funcionality in all browsers and screen sizes.
-    * The Navbar `Home`, `Browse Words`, `New Word` and `Manage Categories` buttons have been extensively tested to rediriect the user to the relevant page.
-    * The Side-Nav buttons of `Home`, `Browse Words`, `New Word` and `Manage Categories` have been extensively tested to rediriect the user to the relevant 
-      page.
+    * All Navbar links are coded within the base.html that extends to each html page. The logo is a home link that has been tested form each page and each link 
+    (e.g. `Shop`; `Register`; `Login`; `Cart`; `Contact`; `Profile`; `Logout`) works correctly accross all devices and screen resolutions. Each link directs the 
+    user to the relevant page and the `Logout` button logs the user out of the site.
+    
 
 *	**Footer** 
-    * The Footer links of `Home`, `Browse Words`, `New Word` and `Manage Categories` have all been extensively tested to redirect the user to the relevant page.
-    * the `More Links` button is where links to external pages will be placed (e.g. Facebook, Twitter etc.) (See Issues List #4).
+    * All Footer links ar ecoded within th ebase.html that extends to each html page. The Footer Logo links back to the homepage that works from each page.
+    The Footer Social Links of `Facebook`, `Twiter`and `Instagram` have all been extensively tested to redirect the user to the relevant Blindside Social Media 
+    page.
 
-*	**Main base.html section**    
-    * The Individual alphabetical letters are situated below the NavBar, but still appear on every page of the web-app. Each letter has been tested numerous 
-      times to ensure that the functionality is correct and brings up all words begininng with the relevant letter, regardless of whether the word stored in the 
-      database begins with an upper or lower case character.
-    * A flashed message appears `This item aleady exists in the database` when a user inputs a word or category that is already in the database. This has been 
-      tested and works provided that spelling and capitalisation of letters matches exactly what is all ready in the database (See Issues List #5).
+*	**Search Bar** 
 
-*	**Homepage Main Section**    
-    * Basic Card Links on the home page of `WORDS`, `NEW WORD` and `CATEGORIES` have been extensively tested to take the user to the relevant page.
-    * The Wave image, homepage paragraph and basic card are set-up to maintain a third each of this section on larger screen types and each take up 
-      the entire width of the screen on smaller devices.
+*	**Product Panel** .
 
-*	**Browse Words Main Section**  
-    * The words on this page are listed in alphabetical order regardless of the case of the initial letter. This functionality required extensive testing in order 
-      make the functions work correctly.
-    * The `Definition` button and drop down menu required were rigourously tested to ensure that they function correctly and display the correct definition for the 
-      associated word direct from the data base.
-    * The `Edit` button for each word redirects the user to the Edit Word page.  
-    * The `Delete` button brings up the `Are you sure you want to delete this word??` box where the user can choose `Ok` or `Cancel`. The `Ok` button deletes the 
-      word and associated definition from the database completely, which functonality has been thoroughly tested. `Cancel` returns the user to the Browse Words page.
+*	**Review Link** 
 
-*	**New Word Main Section**
-    * The user is taken to the Add Word page, where there is a three row form. The `Choose Category` row is a drop down menu selector that shows all categories 
-      currently entered in to the database. This drop down has been tested to ensure that it shows the categories in alphabetical order regardless of capitalisation
-      of the initial letter.The `Input Word` and `Input Definition` rows have been thoroughly tested so that the functionality works and iputs a new word_id and 
-      associated definition in to the database. This required a large amount of testing and with different functions and methods.
-    * The `Add Word` button submits the form to the database and has been extensively tested.
-    * The `Cancel` button returns the user to the Browse Words page. This has been thoroughly tested.
+*	**User Reviews / Ratings Page**
 
-*	**Edit Word Main Section**
-    * The `Edit Word` button directs the user to this page where the user is presented with a three row form. The form is already populated with the existing 
-      `Word Category`, `Word Name` and `Word Definition` from the database. The `Word Category` row is a drop down menu selector that shows all categories 
-      currently entered in to the database. This drop down has been tested to ensure that it shows the categories in alphabetical order regardless of capitalisation
-      of the initial letter.The `Input Word` and `Input Definition` rows have been thoroughly tested so that the functionality works and iputs a new word_id and 
-      associated definition in to the database. This required a large amount of testing and with different functions and methods.
-    * The `Edit Word` button submits the form to the database and overwrites the existing data. This has been extensively tested.
+*	**Add a Review / Rating Page**
 
-*	**Manage Categories Main Section**
-    * The user is taken to the Categories page. The categories on this page are listed in alphabetical order regardless of the case of the initial letter. This 
-      functionality required extensive testing in order make the functions work correctly.
-    * The `Edit` button for each category redirects the user to the Edit Category page.  
-    * The `Delete` button brings up the `Are you sure you want to delete this category??` box where the user can choose `Ok` or `Cancel`. The `Ok` button deletes the 
-      category from the database completely, which functonality has been thoroughly tested. `Cancel` returns the user to the Categories page.  
+*	**Quantity Denominator Field** 
 
-*	**Edit Category Main Section**
-    * The `Edit Category` button presents the user with a single row pre-populated form where the user is able to edit the `Category Name`. This will amend the 
-      category_id dierctly in the database when the `Save Changes` button is pressed. This function has been extensively tested.
-    * The `Cancel` button returns the user to the Browse Categories page. This has been thoroughly tested.    
+*	**Registration Form** 
 
-*	**Add Category Main Section**
-    * by pressing the `Add Category` button in the Manage Categories page the user is taken to the Add Category page, where there is a one row form. The `Category Name` 
-      row allows the user to input a new category. This has been thoroughly tested so that the functionality works and iputs a new category_id in to the database. This 
-      required a large amount of testing and with different functions and methods.
-    * The `Add Category` button submits the form to the database and has been extensively tested.
-    * The `Cancel` button returns the user to the Browse Words page. This has been thoroughly tested.
+*	**Registration - Legal Age Checker** 
 
-*	**Responsive / Mobile First design** 
-    * Each page of the web-app has a **Header**; **Main Section** and **Footer**. These needed to display correctly accross 
-      all devices and screen resolutions. primarily checks are required to ensure that the dashboard collapses in to columns in mobile view 
-      and that the information is presented in a clear and legible fashion.
-    * The header title was is straightened in mobile view in order to resize the Navbar sensibly. This was done to provide a 
-      better user experience and clarity of design, as the title animation did not show well in a smaller view. 
-    * The Side-Nav burger icon presents itself at the top-left of the NavBar in medium and small view. This has been tested across multiple 
-      devices listed in this below.
-    * Various methods of testing have been carried out to test the code of the web-app. Continuous testing throughout the development has been 
-      implemented to check the quality of the code. The aim is to check the functionality of the code on different devices (mobile, tablet, desktop) 
-      with an overall perspective of responsive and mobile first design. The site has been viewed and tested in **Firefox**, **Safari**, **Chrome** 
-      **Microsoft Edge** and **Explorer**. The devices used to test the site are **iPhone 5/SE**, **Samsung Galaxy**, **iPad**, **iPad Pro** 
-      **iPhone X**, **iPhone 6/7/8**, **Pixel 2**, **Pixel 2 XL** , **Hudle2** and **Samsung / Lenovo / HP laptop**. 
+*	**Login Page** 
 
-*	**Blank Form Input** 
-    * Tested input of a blank form in all field of `input word` and `input category` (See Issues List #25)      
+*	**Cart Page** 
+
+*	**Cart - Amend Quantity Button** 
+
+*	**Cart - Total Shopping Amount**
+
+*	**Cart - Checkout Button** 
+
+*	**Cart - Continue Shopping Button**
+
+*	**Checkout Page**
+
+*	**Checkout - Payment Details Form**
+
+*	**Checkout - Payment Card Info Form**
+
+*	**Checkout - Submit Payment Button**
+
+*	**Contact Page**
+
+*	**Contact - User Email Field**
+
+*	**Contact - Message Field**
+
+*	**Contact - Send Message Button**
+
+*	**Profile Page - Form**
+
+*	**Profile - Update Profile Button**
+
+
 
 *	**W3 Nu Html Checker** 
     * All .html files require validation through the online checker. This ensures that the code is more legible and does 
@@ -306,13 +284,13 @@ The main basic functions of the web-app that required rigorous testing in differ
       not contain formatting errors. https://jigsaw.w3.org/css-validator/validator
 
 *	**PEP8 Online** 
-    * The Python (app.py) page requires validation through the online checker. This ensures that the code is more legible and does not contain formatting 
+    * The Python (.py) pages require validation through the online checker. This ensures that the code is more legible and does not contain formatting 
       errors. http://pep8online.com/            
        
-The final database schema and desktop wireframes for the web-app can be seen in the *supporting_docs folder* under *oceanic_dictionary_database_schema.png*, 
-*wireframe1_oceanic_dictionary_home.png*, *wireframe2_ oceanic_dictionary_browse_words.png*, *wireframe3_ oceanic_dictionary_manage_categories.png* 
-and unused *wireframe4_ oceanic_dictionary_manage_categories.png*. These wireframes and database schema were used initially to plan the web-app and build 
-around The opinions of numerous people including my mentor, friends, tutors, chat forums and such like, whom were asked during various stages of the project.
+The final database schema and desktop wireframes for the web-app can be seen in the *supporting_docs folder* under *blindside_brewing_database_schema.png*, 
+*wireframe1_product_page.png*, *wireframe2_ Login_page.png*, *wireframe3_ register_page.png*, *wireframe4_ cart_page.png* and *wireframe5_ checkout_page.png*. 
+These wireframes and database schema were used initially to plan the site and build around. The opinions of numerous people including my mentor, friends, 
+tutors, chat forums and such like, whom were asked during various stages of the project.
 
 ## Issue List
 

@@ -5,7 +5,7 @@
 <div class="container">
 	<div class="col row-flex">
 
-		<h1>Reviews for {{ product }} </h1>
+		<h2>Reviews for {{ product }} </h2>
 		
 		<div class="row product" style="background-image: url('{{ MEDIA_URL }}{{ product.image }}')"></div>
 		<span><h3>{{ product.name }}</h3>
@@ -19,12 +19,11 @@
 
 
 				<div class="caption">
-					<h3>{{ item.product.name }}</h3>
-                    <!-- <li class="reviewitem">Product: {{ product.id }}</li>  <!-- Product list item added --> 
-					<li class="reviewitem">Name: {{ item.name }}</li>
-					<li class="reviewitem">Review: {{ item.review }}</li>
-					<li class="reviewitem">Rating out of 5: {{ item.rating }}</li>
-					<li class="reviewitem">Date:{{ item.date }}</li>
+					<h4>{{ item.product.name }}</h4>
+					<li class="reviewitem"><b>Name:</b> {{ item.name }}</li>
+					<li class="reviewitem"><b>Review:</b> {{ item.review }}</li>
+					<li class="reviewitem"><b>Rating out of 5:</b> {{ item.rating }}</li>
+					<li class="reviewitem"><b>Date:</b>{{ item.date }}</li>
 					<br>
                 </div>
 			</ul>

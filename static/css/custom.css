@@ -245,6 +245,11 @@ caption p {
     list-style-type: none;
 }
 
+.reviewitem p {
+    font-weight: bolder;
+}
+
+
 /*-----------------------------------Footer*/
 
 .footer {

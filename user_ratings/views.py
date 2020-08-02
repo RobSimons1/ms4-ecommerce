@@ -3,13 +3,13 @@ from .models import Review
 from .forms import ItemForm
 from django.contrib import messages
 from products.models import Product # Imported for product specific review
-from datetime import datetime
+from django.utils import timezone
 
 # Create your views here.
 
 def get_review_list(request, id):
     product = get_object_or_404(Product, pk=id)
-    reviews = Review.objects.all().filter(product=product, date__lte=datetime.now()).order_by('-date')
+    reviews = Review.objects.all().filter(product=product, date__lte=timezone.now()).order_by('-date')
     return render(request, "user_reviews.html", {
         'product': product,
         'items': reviews
@@ -19,7 +19,7 @@ def get_review_list(request, id):
 def create_an_item(request, id):
     product = get_object_or_404(Product, pk=id)
     
-    reviews = Review.objects.all().filter(product=product, date__lte=datetime.now()).order_by('-date')
+    reviews = Review.objects.all().filter(product=product)
     if request.method == "POST":        
         new_item = ItemForm(request.POST) # post the new_item to the ItemForm
         if new_item.is_valid():
@@ -31,8 +31,7 @@ def create_an_item(request, id):
             new_item.save()
             messages.success(request, 'Thankyou for your review')
        
-        return render(request, "user_reviews.html", {
-        'new_item': new_item,
+        return render(request, "user_reviews.html", {        
         'product': product,
         'items': reviews
         
