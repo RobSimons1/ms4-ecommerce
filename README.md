@@ -155,7 +155,7 @@ SQLite is the most used database engine in the world. https://www.sqlite.org/ind
 * **Django 1.11.29 -** Django is a high-level Python Web framework that encourages rapid development and clean, pragmatic design. 
 https://www.djangoproject.com/
 
-* **Travis CI -** Built to integrate with GitHub and Heroku. Using OAuth for authentication. Travis syncs users permissions to the repositories 
+* **Travis CI 4.3.0 -** Built to integrate with GitHub and Heroku. Using OAuth for authentication. Travis syncs users permissions to the repositories 
 you want them to have access to. Allowing  greater control over security and to scale out your build infrastructure as needed.
 
 * **AWS S3 -** Amazon Simple Storage Service (Amazon S3) is an object storage service that offers industry-leading scalability, data availability, 
@@ -221,21 +221,41 @@ The main basic functions of the site that required rigorous testing in different
     
 
 *	**Footer** 
-    * All Footer links ar ecoded within th ebase.html that extends to each html page. The Footer Logo links back to the homepage that works from each page.
+    * All Footer links ar ecoded within the base.html that extends to each html page. The Footer Logo links back to the homepage that works from each page.
     The Footer Social Links of `Facebook`, `Twiter`and `Instagram` have all been extensively tested to redirect the user to the relevant Blindside Social Media 
     page.
 
 *	**Search Bar** 
+    * The Search bar is used to search all available products on the homepage. The search bar is available beneath the header on each individual page. The search
+    bar returns items that are related to the search string, otherwise no items will be returned. This function works correctly.
 
-*	**Product Panel** .
+*	**Product Panel**
+    * Each product panel shows all information related to the individual product, the majority of which is stored in the database. Products can be added or deleted
+    by a SuperUser in the `admin` panel. The attributes for each product displayed in each product panel are Name, Description, Info, Blurb, Size, Alcohol, Price 
+    and Image. All of these attributes have been tested and work correctly. In Products/tests.py/ there is a test configured to test the product name, which works 
+    as expected. 
 
 *	**Review Link** 
+    * Within each product panel their is a link to the User reviews page. This directs the user to a page that shows the customer reviews for that specific product. 
+    This function has extensively tested and returns all the user reviews and ratings in chronological order.  
 
 *	**User Reviews / Ratings Page**
+    * Each Customer review returns the Name, Review, Rating out of 5 and the Date. All of these fields are stored in the Django database and linked to the individual 
+    product by the Foreign Key and Primary Key. The Product.ID label is required for the function to work, but is hidden from view, as it displays the relevant number 
+    ID associated with the particular product. The functionality for this feature works as expected. 
 
 *	**Add a Review / Rating Page**
+    * The `Add a review` link takes the user to the page where a review and reatin can be inserted in to the database. If the user is logged in the `Name` field will 
+    be automatically populated with the users username, if not this will be blank and can be filled in. The review field s for the user to insert their thoughts of 
+    the product. The rating allows the user to score the individual product between 1 and 5. All of these fields are stored in the Django database and linked to the 
+    individual product by the Foreign Key and Primary Key. To test the funcionality of this feature extensive print statements were added to the `create_an_item` 
+    function that checked that the form was valid and if so saved utilising Django's 'The Save() Method'.
+
 
 *	**Quantity Denominator Field** 
+    * This field inserts a selected number of each individual product into the Cart. Validation of this can be seen when the user presses the `Add` button and the number 
+    quantity of items can be seen in the Cart Icon in the Navbar. This is the case on larger resolution screens, but notfor smaller resolutions where the Cart Menu Icon is 
+    not immediately available. Once the user views the Cart page. all of the selected items will be shown with their aquired quantity.
 
 *	**Registration Form** 
 
