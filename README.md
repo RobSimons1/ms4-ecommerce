@@ -8,7 +8,7 @@ The user needs to be registered and logged in, in order to advance to the checko
 made using STRIPE. 
 
 The site is easy to use and allows the authenticated user a range of options including the ability to send an email to the site owner using the contact 
-form and view their own profile. 
+form and view and update their own profile. The user can leave a review for each product and view reviews left by other users.
 
 The purpose of the site is to ultimately to sell Blindside Brewing products and make the user experience as easy and pleasurable as possible.
 
@@ -326,7 +326,7 @@ tutors, chat forums and such like, whom were asked during various stages of the 
 
 ## Deployment
 
-The web-app is designed in the Gitpod environment and regularly committed to GitHub after each crucial piece of coding. 
+The web-site is designed in the Gitpod environment and regularly committed to GitHub after each crucial piece of coding. 
 Using this method as a sanity check for the development enabled me to restore the site back to previous stages when it 
 functioned correctly or easily find lost pieces of code. 
 
@@ -394,19 +394,11 @@ This README.md file is based on the Code Institute template.
 
 ### Media 
 
-Words, Definitions and Categories in Dictionary are taken from many different sources and are mainly used as preliminary 
-filling for the project. Credit to similar websites: https://digimap.edina.ac.uk/webhelp/marine/getting_started/marine_glossary.htm 
-; https://life.bio.sunysb.edu/marinebio/glossary.ghijk.html ; https://www.enchantedlearning.com/wordlist/ocean.shtml ; https://www.google.com/ ; 
-
-Homepage Paragraph: http://www.seasky.org/
-
-Favicon image downloaded from: https://www.shutterstock.com/image-vector/dangerous-sea-life-207907852?studio=1
+All images and logo's utilised have been displayed with the permisson of Blindside-Brewing.
 
 Favicon – created using http://www.favicomatic.com/done
 
-Wave Image: http://www.ox.ac.uk/news/2015-12-16-freak-ocean-waves-hit-without-warning-new-research-shows
-
 ### Acknowledgments
 
-I would like to thank all of the Code Insitute Tutors for there incredible patients and assitance and Anthony Ngene 
+I would like to thank all of the Code Insitute Tutors for there incredible patients and assitance and my mentor Anthony Ngene 
 (https://github.com/tonymontaro) for his invaluable feedback, as supervisor for this project. 
