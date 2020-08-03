@@ -4,53 +4,56 @@
 
 {% block content %}
 <div class="container">
-<div class="row row-flex">
-    {% for item in cart_items %}
-    
-    <div class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-6 col-md-4 display panel panel-display">
-        
-        <div class="product" style="background-image: url('{{ MEDIA_URL }}{{ item.product.image }}')"></div>
-        
-        <div class="caption">
-            <h3>{{ item.product.name }}</h3>
-            <p class="product-description">{{ item.product.description }}</p>
-            <p class="glyphicon glyphicon-euro" aria-hidden="true"></p>{{ item.product.price }}
-            <p>                
-                <form class="form-inline" method="post" action="{% url 'adjust_cart' item.id %}">
-                    {% csrf_token %}
-                    <div class="form-group">
-                        <label for="exampleInputAmount" class="sr-only">New Qty</label>
-                        <div class="input-group">
-                            <div class="input-group-addon">Qty</div>
-                            <input name="quantity" type="number" min="0" max="999" class="form-control" required>
-                            <!-- required attribute added to placeholder to stop user sumbitting a blank string -->
-                            <div class="input-group-addon">{{item.quantity}}</div>
-                        </div>
-                    </div>
-                    <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span>Amend</button>
-                </form>
-            </p>
-        </div>
-    </div>
-    {% endfor %}
-</div>
-<div class="row">
-    {% if cart_items %}
+	<div class="row row-flex">
+		{% for item in cart_items %}
 
-    <h3>Total</h3>
-    <h3><span class="glyphicon glyphicon-euro" aria-hidden="true"></span>{{ total }}</h3>
-    <a href="{% url 'checkout' %}" class="btn btn-success" role="button"><span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span>Checkout</a>
-    <span><a href="{% url 'index' %}" class="btn btn-primary" role="button"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>Continue Shopping</a></span>
+		<div class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-6 col-md-4 display panel panel-display">
+
+			<div class="product" style="background-image: url('{{ MEDIA_URL }}{{ item.product.image }}')"></div>
+
+			<div class="caption">
+				<h3>{{ item.product.name }}</h3>
+				<p class="product-description">{{ item.product.description }}</p>
+				<p class="glyphicon glyphicon-euro" aria-hidden="true"></p>{{ item.product.price }}
+				<p>
+					<form class="form-inline" method="post" action="{% url 'adjust_cart' item.id %}">
+						{% csrf_token %}
+						<div class="form-group">
+							<label for="exampleInputAmount" class="sr-only">New Qty</label>
+							<div class="input-group">
+								<div class="input-group-addon">Qty</div>
+								<input name="quantity" type="number" min="0" max="999" class="form-control" required>
+								<!-- required attribute added to placeholder to stop user sumbitting a blank string -->
+								<div class="input-group-addon">{{item.quantity}}</div>
+							</div>
+						</div>
+						<button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span>Amend</button>
+					</form>
+				</p>
+			</div>
+		</div>
+		{% endfor %}
+	</div>
+	<div class="row">
+		{% if cart_items %}
+
+		<h3>Total</h3>
+		<h3><span class="glyphicon glyphicon-euro" aria-hidden="true"></span>{{ total }}</h3>
+		<a href="{% url 'checkout' %}" class="btn btn-success"
+			role="button"><span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span>Checkout</a>
+		<span><a href="{% url 'index' %}" class="btn btn-primary" role="button"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>Continue
+		Shopping</a></span>
+	</div>
+
+	{% else %}
+	<div class="no-items">
+		<div class="row">
+			<h3>No items in your Cart.</h3>
+			<a href="{% url 'index' %}" class="btn btn-primary"
+				role="button"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>Continue Shopping</a>
+		</div>
+	</div>
+	{% endif %}
 </div>
 
-{% else %}
-<div class="no-items">
-    <div class="row">
-    <h3>No items in your Cart.</h3>
-    <a href="{% url 'index' %}" class="btn btn-primary" role="button"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>Continue Shopping</a>
-    </div>
-</div>    
-{% endif %}
-</div> 
-</div> 
 {% endblock %}

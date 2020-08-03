@@ -130,8 +130,7 @@ presented in the Reviews page.
 unathorised user homepage. The user is notified by a green notification success message banner that they have successfully logged out. 
 
 ### Features left to implement
-
-* .
+* Star rating for reveiws on Homepage next to product. Due to time constraints this was not done. 
 
 * .
 
@@ -349,13 +348,13 @@ tutors, chat forums and such like, whom were asked during various stages of the 
   |   1    |Import on Line 17 of settings.py showing '	module level import not at top of file' in PEP8 check.|This import is set up for use in the For Loop, so is left as is |
   |   2    |Line 108 in settings.py showing as too long in PEP8 check|Line cannot be shortened, so left in situ|
   |   3    |Postgres Database crashed and could not submit new products|Reset Data base in Heroku|
-  |   4    |Uncaught ReferenceError: showTopNav is not defined|This error is related to the Javascript in base.html that removes the TopNav bar when th euser scrolls down. This has been lleft, as seems to work as intended|
+  |   4    |Uncaught ReferenceError: showTopNav is not defined|This error is related to the Javascript in base.html that removes the TopNav bar when th euser scrolls down. This has been left, as seems to work as intended|
   |   5    |Review message field on create review page should be Textarea | Am unable to change this using a widget. Tried numerous times.|
-  |   6    |||
+  |   6    |The form fields such as Quantity are overlapping the Footer probably due to Z-Index | I have opaqued the Footer, as I like the look of this and the user can see more of the page|
   |   7    |||
   |   8    |||
-  |   9    |||
-  |   10   |Explorer displaying the |Decided to leave this, as browser being phased out and rarely used |
+  |   9    |Need to insert a message if the search from the search bar returns nothing (e.g. No Products match your search)| Did not have time to implement|
+  |   10   |||
   |   11   |||
   |   12   |||
   |   13   |||
@@ -365,8 +364,8 @@ tutors, chat forums and such like, whom were asked during various stages of the 
   |   17   |||
   |   18   |Needed to validate Python (.py files) for debugging purposes| Utilised PEP8 online checker. All code successfully updated and passed except see above Issue 1 and 2 |
   |   19   |Needed to validate CSS (custom.css) for debugging purposes| Utilised jigsaw.w3 online checker. All code successfully updated and passed|
-  |   20   |Needed to validate HTML (.html files) for debugging purposes| Utilised validator.w3 online checker. All code successfully updated and passed|||
-  |   21   |||
+  |   20   |Needed to validate HTML (.html files) for debugging purposes| Utilised validator.w3 online checker. All code successfully updated and passed except items relating to Jinja Template that cause errors. Also see issue below|
+  |   21   |Error: Element legend not allowed as child of element form in this context. (Suppressing further errors from this subtree.)|Unable to correct this error, as this was given text |
   |   22   |Is HTML semantic and self explanatory  | Added further comments to html files |
   |   23   |||
   |   24   |||
