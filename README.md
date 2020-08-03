@@ -383,10 +383,11 @@ tutors, chat forums and such like, whom were asked during various stages of the 
   |   12   |Needed to validate HTML (.html files) for debugging purposes| Utilised validator.w3 online checker. All code successfully updated and passed except items relating to Jinja Template that cause errors. Also see issue below|
   |   13   |Error: Element legend not allowed as child of element form in this context. (Suppressing further errors from this subtree.)|Unable to correct this error, as this was given text |
   |   14   |Is HTML semantic and self explanatory  | Added further comments to html files |
-  |   15   |Field sizes need reviewing for most forms | Due to time restraints did not get to review these|
-  |   16   |404 Errors required for instances where usher visits an unavailable page | Due to time restraints did not get to review these|
-  |   17   |Insufficient time to implement User Profile function that automatically updates the Checkout name and address details | Due to time restraints did not get to implement this|
-  |   18   |Contact form does not automatically update with users email | Due to time restraints did not get to implement this|
+  |   15   |Needed to validate Javascript for debugging purposes| Utilised JSHint online checker. All code successfully updated and passed|
+  |   16   |Field sizes need reviewing for most forms | Due to time restraints did not get to review these|
+  |   17   |404 Errors required for instances where usher visits an unavailable page | Due to time restraints did not get to review these|
+  |   18   |Insufficient time to implement User Profile function that automatically updates the Checkout name and address details | Due to time restraints did not get to implement this|
+  |   19   |Contact form does not automatically update with users email | Due to time restraints did not get to implement this|
   
 
 ## Deployment
