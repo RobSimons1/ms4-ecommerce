@@ -15,8 +15,7 @@
             <h3>{{ item.product.name }}</h3>
             <p class="product-description">{{ item.product.description }}</p>
             <p class="glyphicon glyphicon-euro" aria-hidden="true"></p>{{ item.product.price }}
-            <p>
-                
+            <p>                
                 <form class="form-inline" method="post" action="{% url 'adjust_cart' item.id %}">
                     {% csrf_token %}
                     <div class="form-group">

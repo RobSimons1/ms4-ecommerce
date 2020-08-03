@@ -127,7 +127,7 @@ body {
 #search-bar {
     text-align: center;
     display: block;   
-    padding-bottom: 5px 0px 0px 10px;
+    padding: 5px 0px 0px 10px;
 }
 
 /* Input for search bar */
@@ -141,7 +141,6 @@ body {
 
 .quantity-field {
     width: 200px;
-    float: left center;
 }
 
 .accountform {
@@ -256,7 +255,6 @@ caption p {
   position: fixed;
   bottom: 0;
   width: 100%;   
-  background-color:; /* Remove if not required */
   margin-top: auto;
 }
 
@@ -285,7 +283,6 @@ caption p {
 .social-links li a i {    
     margin-top: 15px ! important;
     margin-bottom: 10px ! important;
-    display: centre;
     text-shadow: 1px 1px #c67605;
     width: 50px;
     height: 0px;

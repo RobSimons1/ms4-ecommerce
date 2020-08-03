@@ -1,8 +1,9 @@
 from django.db import models
-from products.models import Product # Imported for product specific review
+from products.models import Product
 from django.utils import timezone
 
 # Create your models here.
+
 
 class Review(models.Model):
     product = models.ForeignKey(
@@ -17,8 +18,8 @@ class Review(models.Model):
         ("5", '5'),
     )
     rating = models.CharField(max_length=10,
-                                      choices=RATING_CHOICES,
-                                      default="3")
+                              choices=RATING_CHOICES,
+                              default="3")
     date = models.DateTimeField(default=timezone.now, blank=True)
 
     def __str__(self):

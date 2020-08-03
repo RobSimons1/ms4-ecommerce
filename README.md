@@ -346,11 +346,11 @@ tutors, chat forums and such like, whom were asked during various stages of the 
 
   | Issue  |                 Description                     |       Solution                      |  
   | ------ |:-----------------------------------------------:|:-----------------------------------:|
-  |   1    |||
-  |   2    |||
-  |   3    |||
-  |   4    |||
-  |   5    |||
+  |   1    |Import on Line 17 of settings.py showing '	module level import not at top of file' in PEP8 check.|This import is set up for use in the For Loop, so is left as is |
+  |   2    |Line 108 in settings.py showing as too long in PEP8 check|Line cannot be shortened, so left in situ|
+  |   3    |Postgres Database crashed and could not submit new products|Reset Data base in Heroku|
+  |   4    |Uncaught ReferenceError: showTopNav is not defined|This error is related to the Javascript in base.html that removes the TopNav bar when th euser scrolls down. This has been lleft, as seems to work as intended|
+  |   5    |Review message field on create review page should be Textarea | Am unable to change this using a widget. Tried numerous times.|
   |   6    |||
   |   7    |||
   |   8    |||
@@ -363,9 +363,9 @@ tutors, chat forums and such like, whom were asked during various stages of the 
   |   15   |||
   |   16   |||
   |   17   |||
-  |   18   |Needed to validate Python (app.py) for debugging purposes| Utilised PEP8 online checker. All code successfully updated and passed |
-  |   19   |||
-  |   20   |||
+  |   18   |Needed to validate Python (.py files) for debugging purposes| Utilised PEP8 online checker. All code successfully updated and passed except see above Issue 1 and 2 |
+  |   19   |Needed to validate CSS (custom.css) for debugging purposes| Utilised jigsaw.w3 online checker. All code successfully updated and passed|
+  |   20   |Needed to validate HTML (.html files) for debugging purposes| Utilised validator.w3 online checker. All code successfully updated and passed|||
   |   21   |||
   |   22   |Is HTML semantic and self explanatory  | Added further comments to html files |
   |   23   |||
