@@ -147,6 +147,8 @@ unathorised user homepage. The user is notified by a green notification success 
 * Due to time constraint it was not possible to implement the functionality to have the Users Profile info automatically update the Checkout Form 
 relating to the users address details. This is a work in progress.
 
+* Contact form should automatically update with Users email.
+
 ## Technologies Used
 The languages, frameworks, libraries and other tools utilised for building this web-app are:
 
@@ -384,6 +386,7 @@ tutors, chat forums and such like, whom were asked during various stages of the 
   |   15   |Field sizes need reviewing for most forms | Due to time restraints did not get to review these|
   |   16   |404 Errors required for instances where usher visits an unavailable page | Due to time restraints did not get to review these|
   |   17   |Insufficient time to implement User Profile function that automatically updates the Checkout name and address details | Due to time restraints did not get to implement this|
+  |   18   |Contact form does not automatically update with users email | Due to time restraints did not get to implement this|
   
 
 ## Deployment
