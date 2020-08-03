@@ -132,7 +132,20 @@ unathorised user homepage. The user is notified by a green notification success 
 ### Features left to implement
 * Star rating for reveiws on Homepage next to product. Due to time constraints this was not done. 
 
-* .
+* Blog for users to share stories and experiences of the products sold.
+
+* Search function not returning anything when no items match. Need to Update to show message (e.g. No Products match your search).
+
+* If no product reviews have been left, need to add a statement saying 'Please be the first to review this product'.
+
+* Add more products.
+
+* Write more tests in tests.py files for each individual app.
+
+* 404 Errors required for instances where usher visits an unavailable page
+
+* Due to time constraint it was not possible to implement the functionality to have the Users Profile info automatically update the Checkout Form 
+relating to the users address details. This is a work in progress.
 
 ## Technologies Used
 The languages, frameworks, libraries and other tools utilised for building this web-app are:
@@ -191,7 +204,7 @@ and it is easy to learn for brginners. https://www.python.org/
 * **Gunicorn 20.0.4 -** Gunicorn ‘Green Unicorn’ is a Python WSGI HTTP Server for UNIX. The Gunicorn server is broadly compatible with 
 various web frameworks, simply implemented, light on server resources, and fairly speedy. https://docs.gunicorn.org/en/stable/
 
-* **Pillow 7.1.1 -** The Python Imaging Library adds image processing capabilities to your Python interpreter. This library provides
+* **Pillow 4.3.0 -** The Python Imaging Library adds image processing capabilities to your Python interpreter. This library provides
 extensive file format support, an efficient internal representation, and fairly powerful image processing capabilities. 
 https://pillow.readthedocs.io/en/stable/handbook/overview.html
 
@@ -218,7 +231,6 @@ The main basic functions of the site that required rigorous testing in different
     (e.g. `Shop`; `Register`; `Login`; `Cart`; `Contact`; `Profile`; `Logout`) works correctly accross all devices and screen resolutions. Each link directs the 
     user to the relevant page and the `Logout` button logs the user out of the site.
     
-
 *	**Footer** 
     * All Footer links ar ecoded within the base.html that extends to each html page. The Footer Logo links back to the homepage that works from each page.
     The Footer Social Links of `Facebook`, `Twiter`and `Instagram` have all been extensively tested to redirect the user to the relevant Blindside Social Media 
@@ -323,6 +335,16 @@ The main basic functions of the site that required rigorous testing in different
     * The AWS S3 allows access to stored files within the site owners AWS bucket that are shared through the users AWS account. The accompanying AWS info is linked through the relavant AWS info in the 
     `settings.py` file. The testing of this functionality is shown in the availability of the stored data in the post prodution database andsite.
 
+*	**Responsive / Mobile First design** 
+    * Each page of the web-site has a **Header**; **Main Section** and **Footer**. These needed to display correctly accross 
+      all devices and screen resolutions. primarily checks are required to ensure that the site collapses in to columns in mobile view 
+      and that the information is presented in a clear and legible fashion.    
+    * Various methods of testing have been carried out to test the code of the web-site. Continuous testing throughout the development has been 
+      implemented to check the quality of the code. The aim is to check the functionality of the code on different devices (mobile, tablet, desktop) 
+      with an overall perspective of responsive and mobile first design. The site has been viewed and tested in **Firefox**, **Safari**, **Chrome** 
+      **Microsoft Edge** and **Explorer**. The devices used to test the site are **iPhone 5/SE**, **Samsung Galaxy**, **iPad**, **iPad Pro** 
+      **iPhone X**, **iPhone 6/7/8**, **Pixel 2**, **Pixel 2 XL** , **Hudle2** and **Samsung / Lenovo / HP laptop**.     
+
 *	**W3 Nu Html Checker** 
     * All .html files require validation through the online checker. This ensures that the code is more legible and does 
       not contain formatting errors. https://validator.w3.org/ 
@@ -351,26 +373,18 @@ tutors, chat forums and such like, whom were asked during various stages of the 
   |   4    |Uncaught ReferenceError: showTopNav is not defined|This error is related to the Javascript in base.html that removes the TopNav bar when th euser scrolls down. This has been left, as seems to work as intended|
   |   5    |Review message field on create review page should be Textarea | Am unable to change this using a widget. Tried numerous times.|
   |   6    |The form fields such as Quantity are overlapping the Footer probably due to Z-Index | I have opaqued the Footer, as I like the look of this and the user can see more of the page|
-  |   7    |||
-  |   8    |||
+  |   7    |Travis CI not accepting Pillow 7.1.1| Reinstalled Pillow 4.3.0|
+  |   8    |When checking search bar borders in each screen resolution, they appear to sometimes disappear randomly|Have checked on actual devices and this is not the case|
   |   9    |Need to insert a message if the search from the search bar returns nothing (e.g. No Products match your search)| Did not have time to implement|
-  |   10   |||
-  |   11   |||
-  |   12   |||
-  |   13   |||
-  |   14   |||
-  |   15   |||
-  |   16   |||
-  |   17   |||
-  |   18   |Needed to validate Python (.py files) for debugging purposes| Utilised PEP8 online checker. All code successfully updated and passed except see above Issue 1 and 2 |
-  |   19   |Needed to validate CSS (custom.css) for debugging purposes| Utilised jigsaw.w3 online checker. All code successfully updated and passed|
-  |   20   |Needed to validate HTML (.html files) for debugging purposes| Utilised validator.w3 online checker. All code successfully updated and passed except items relating to Jinja Template that cause errors. Also see issue below|
-  |   21   |Error: Element legend not allowed as child of element form in this context. (Suppressing further errors from this subtree.)|Unable to correct this error, as this was given text |
-  |   22   |Is HTML semantic and self explanatory  | Added further comments to html files |
-  |   23   |||
-  |   24   |||
-  |   25   |||  
-  |   26   |||
+  |   10   |Needed to validate Python (.py files) for debugging purposes| Utilised PEP8 online checker. All code successfully updated and passed except see above Issue 1 and 2 |
+  |   11   |Needed to validate CSS (custom.css) for debugging purposes| Utilised jigsaw.w3 online checker. All code successfully updated and passed|
+  |   12   |Needed to validate HTML (.html files) for debugging purposes| Utilised validator.w3 online checker. All code successfully updated and passed except items relating to Jinja Template that cause errors. Also see issue below|
+  |   13   |Error: Element legend not allowed as child of element form in this context. (Suppressing further errors from this subtree.)|Unable to correct this error, as this was given text |
+  |   14   |Is HTML semantic and self explanatory  | Added further comments to html files |
+  |   15   |Field sizes need reviewing for most forms | Due to time restraints did not get to review these|
+  |   16   |404 Errors required for instances where usher visits an unavailable page | Due to time restraints did not get to review these|
+  |   17   |Insufficient time to implement User Profile function that automatically updates the Checkout name and address details | Due to time restraints did not get to implement this|
+  
 
 ## Deployment
 
