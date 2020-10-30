@@ -72,9 +72,9 @@
 							<a href="{% url 'view_cart' %}" class="hvr-pulse">
 								<i class="fa fa-shopping-cart"></i><span>Cart
                             {% if product_count > 0 %}
-                            <label class="badge badge-warning">{{ product_count }}</label></span>
+                            <small class="badge badge-warning">{{ product_count }}</small></span>
 								{% endif %}
-							</a>
+                            </a>
 						</li>
 					</ul>
 				</div>
@@ -98,7 +98,7 @@
 			<div class="display">
 				<form action="{% url 'search' %}" method="get">
 					<div class="search-input"> <input type="text" name="q"><span>
-					<button type="search">Search</button></span>
+					<button type="submit">Search</button></span>
 					</div>
 				</form>
 			</div>
