@@ -132,6 +132,8 @@
 		</div>
 
 	</div>
+    {% empty %} <!-- Added to return message if no products match search query -->
+	<h3>Sorry, none of our products match your search</h3>
 	{% endfor %}
 </div>
 {% endblock %}
